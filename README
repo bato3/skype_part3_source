@@ -1,0 +1,10 @@
+	  			:: Readme ::
+
+
+Just extracted files from skype_part3_source.zip archive.
+
+vc_proj   -- contains visual studio 6.0 different projects on skype
+proto     -- some text files with proto descriptions.
+get_cred  -- tool for dump skype account credenetials.
+
+
