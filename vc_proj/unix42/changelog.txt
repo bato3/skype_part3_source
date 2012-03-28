@@ -1,0 +1,3 @@
+//memcpy((char *)code_array + 1, (char*)code_array, 4 * i);
+    memmove(code_array + 1, code_array, 4 * i);
+[15:43:48] xot_iam says: http://ubuntuforums.org/showthread.php?t=349117

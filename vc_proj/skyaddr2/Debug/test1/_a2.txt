@@ -1,0 +1,128 @@
+SkypeUser: chris.kyriazis
+User Slot: #228 (0x000000E4)
+Nodes in slot: 10
+Search request to target node ip: 71.60.218.16
+aft rc4:
+Len: 0x00000007
+05 7B 4F 1C 42 3C 25 
+Search request to target node ip: 98.236.17.50
+aft rc4:
+Len: 0x00000007
+05 7B 03 14 42 3C 25 
+Search request to target node ip: 87.244.133.23
+Search request to target node ip: 216.51.245.108
+aft rc4:
+Len: 0x00000007
+05 7B 1D 58 42 3C 25 
+Search request to target node ip: 84.109.171.44
+aft rc4:
+Len: 0x00000007
+05 7B 7C DD 42 3C 25 
+Search request to target node ip: 220.208.80.46
+aft rc4:
+Len: 0x00000007
+05 7B 47 38 42 3C 25 
+Search request to target node ip: 70.15.203.155
+aft rc4:
+Len: 0x00000007
+05 7B 0B DD 42 3C 25 
+Search request to target node ip: 76.104.149.156
+aft rc4:
+Len: 0x00000007
+05 7B 1A 38 42 3C 25 
+Search request to target node ip: 99.249.101.244
+aft rc4:
+Len: 0x000001B0
+AD 03 7B 01 FC 42 F6 1E B1 4D 4A F4 60 9B 37 F1 
+ AA F2 B2 7A 87 43 00 00 01 04 00 00 00 01 19 B8 
+ 63 8F 89 67 D4 8E 6F 06 58 4F 32 63 70 39 1D 72 
+ DC 5A E2 4F C9 A3 04 83 26 6B D6 F5 03 0E 6B 5A 
+ 31 C3 8E E7 73 BF 83 0F 44 24 01 A7 CA 82 85 72 
+ 7E C0 BB D0 2E 17 9D C6 51 94 D1 8E C7 19 3D AC 
+ 44 55 76 B6 4E F4 E0 56 71 8D 5E C2 34 B1 49 D3 
+ 69 0B 1B 8A B4 3C 69 28 4D CE F4 37 B2 0B 28 E7 
+ 2B 4C 94 6D 2B 09 27 49 58 87 68 28 6A ED A8 80 
+ B5 D4 84 65 92 8F 98 98 64 23 D7 AA 7A A9 96 3A 
+ 08 66 30 5E 07 7D A0 1D 83 31 7E 03 33 72 63 7F 
+ B5 96 D1 DE D7 3C 6A A9 C6 1B 57 6E 00 94 BD AB 
+ 7B 02 8D C3 E7 F0 86 DD 31 60 A8 39 1B 9D 0F 1A 
+ 7E 51 22 72 D4 EB 65 EF CA EE 91 CA 57 63 BE C2 
+ 00 CE 75 C2 0D B4 AE 29 80 BE 03 E5 23 D1 B6 5B 
+ E8 B8 FE A0 50 8C 1F 41 1F B8 32 94 79 E0 DF 00 
+ E5 62 A4 04 0E 2C A6 7A 8A C1 85 59 61 F6 68 37 
+ 8B 06 4C DD 82 97 73 80 50 CD 99 DA 0C 89 8F C8 
+ 07 91 58 34 92 DD 95 03 B2 6F 87 64 76 5B 8D EA 
+ E8 77 BF 3A 4E 31 15 D7 AF 11 50 66 03 88 DA 02 
+ 91 F8 D3 4F F4 CC 72 1F 5A 7D 9D E0 34 CE AA CC 
+ 7B 20 D6 2A B2 FD 8C DD 3B E7 17 8F B4 F6 61 C3 
+ 28 42 0C 2F CF 83 89 EC 84 DC 04 71 1C 5A F4 37 
+ 52 84 51 15 0F DC 3E 79 4D 93 53 30 6C A9 48 DB 
+ 2F CB F6 C6 1A C9 77 D3 6A 6C 15 BF 3D 57 F3 3B 
+ 52 5E 80 1F EA 2C 0F 66 EB 55 BE 42 12 DD 47 62 
+ F3 E8 E3 B3 47 51 12 9F 27 1A C0 A8 01 64 E3 B3 
+ 
+
+::CREDENTIALS::
+Skypename: chris.kyriazis
+
+Profile:
+04-03: 27 bytes
+0000: 03 AC 3C 0D FB 68 B2 C6 00 3A 03 9E A8 63 CA 60 | ..<..h...:...c.` |
+0010: 43 4C B6 3B CA F3 44 16 55 08 C9                | CL.;..D.U..      |
+03-14: "Chris Kyriazis"
+00-21: 01 00 00 00
+03-24: "en"
+03-28: "us"
+03-30: "Treasure Island"
+03-40: "73dd2dd1f468130fd2d5813c8258dd865b8aeddb"
+00-4D: E0 37 F8 49
+00-5F: 2E 00 00 00
+04-03: 27 bytes
+0000: 03 AC 3C 0D FB 68 B2 C6 00 3A 03 9E A8 63 CA 60 | ..<..h...:...c.` |
+0010: 43 4C B6 3B CA F3 44 16 55 08 C9                | CL.;..D.U..      |
+03-14: "Chris Kyriazis"
+00-21: 01 00 00 00
+03-24: "en"
+03-28: "us"
+03-30: "Treasure Island"
+03-40: "73dd2dd1f468130fd2d5813c8258dd865b8aeddb"
+00-4D: E0 37 F8 49
+00-5F: 2E 00 00 00
+ost len:0x0000007D
+
+Learned new nodeinfo for chris.kyriazis: ipflag: 0x0
+0x3ac3cdfb68b2c6-s-96.67.76.182:15306/58.3.158.168:25546 243.68.22.85:2249
+
+:: END ::
+
+05-00: {
+04-0B: 410 bytes
+0000: 00 00 01 04 00 00 00 01 19 B8 63 8F 89 67 D4 8E | ..........c..g.. |
+0010: 6F 06 58 4F 32 63 70 39 1D 72 DC 5A E2 4F C9 A3 | o.XO2cp9.r.Z.O.. |
+0020: 04 83 26 6B D6 F5 03 0E 6B 5A 31 C3 8E E7 73 BF | ..&k....kZ1...s. |
+0030: 83 0F 44 24 01 A7 CA 82 85 72 7E C0 BB D0 2E 17 | ..D$.....r~..... |
+0040: 9D C6 51 94 D1 8E C7 19 3D AC 44 55 76 B6 4E F4 | ..Q.....=.DUv.N. |
+0050: E0 56 71 8D 5E C2 34 B1 49 D3 69 0B 1B 8A B4 3C | .Vq.^.4.I.i....< |
+0060: 69 28 4D CE F4 37 B2 0B 28 E7 2B 4C 94 6D 2B 09 | i(M..7..(.+L.m+. |
+0070: 27 49 58 87 68 28 6A ED A8 80 B5 D4 84 65 92 8F | 'IX.h(j......e.. |
+0080: 98 98 64 23 D7 AA 7A A9 96 3A 08 66 30 5E 07 7D | ..d#..z..:.f0^.} |
+0090: A0 1D 83 31 7E 03 33 72 63 7F B5 96 D1 DE D7 3C | ...1~.3rc......< |
+00A0: 6A A9 C6 1B 57 6E 00 94 BD AB 7B 02 8D C3 E7 F0 | j...Wn....{..... |
+00B0: 86 DD 31 60 A8 39 1B 9D 0F 1A 7E 51 22 72 D4 EB | ..1`.9....~Q"r.. |
+00C0: 65 EF CA EE 91 CA 57 63 BE C2 00 CE 75 C2 0D B4 | e.....Wc....u... |
+00D0: AE 29 80 BE 03 E5 23 D1 B6 5B E8 B8 FE A0 50 8C | .)....#..[....P. |
+00E0: 1F 41 1F B8 32 94 79 E0 DF 00 E5 62 A4 04 0E 2C | .A..2.y....b..., |
+00F0: A6 7A 8A C1 85 59 61 F6 68 37 8B 06 4C DD 82 97 | .z...Ya.h7..L... |
+0100: 73 80 50 CD 99 DA 0C 89 6A C0 A1 0D AE 6F 9A 97 | s.P.....j....o.. |
+0110: C4 39 EA 14 EB 06 13 9B 72 D6 11 15 78 42 C4 68 | .9......r...xB.h |
+0120: AC 80 03 9E 6B C4 D2 F1 A8 C2 34 81 28 CF 02 F1 | ....k.....4.(... |
+0130: 5A 80 41 D1 B8 FD F8 D3 2B 55 C4 0C 63 AE 4C DA | Z.A.....+U..c.L. |
+0140: 3A C7 69 D9 22 83 D7 56 1F D5 4D 10 2C 43 51 0E | :.i."..V..M.,CQ. |
+0150: E5 A0 5C 67 AB DD B6 F3 2B 2A 8D 6E E6 36 F2 15 | ..\g....+*.n.6.. |
+0160: D0 03 42 D6 47 7F 0D 8F 58 23 03 AC 3C 0D FB 68 | ..B.G...X#..<..h |
+0170: B2 C6 00 3A 03 9E A8 63 CA 60 43 4C B6 3B CA F3 | ...:...c.`CL.;.. |
+0180: 44 16 55 08 C9 30 ED BC 47 62 F3 E8 E3 B3 47 51 | D.U..0..Gb....GQ |
+0190: 12 9F 27 1A C0 A8 01 64 E3 B3                   | ..'....d..       |
+03-10: "chris.kyriazis"
+05-00: }
+00-01: 01 00 00 00

@@ -1,0 +1,77 @@
+
+brk after aes, when recv msg
+
+
+02c3f3e8
+
+
+AES_Encrypt_Decrypt_Packet_007CB639
+After AES decrypt
+Buffer Len: 0x0000004A
+20:23:16 DATA:
+20:23:16 ED EB 02 6D 41 04 00 01 C0 B1 B5 C0 0E 00 03 00
+20:23:16 04 04 32 41 04 00 01 0D 03 02 23 78 6F 74 65 67
+20:23:16 5F 69 61 6D 2F 24 78 6F 74 5F 69 61 6D 3B 64 63
+20:23:16 61 61 61 61 65 38 36 35 38 37 61 62 35 33 00 00
+20:23:16 1C 01 00 1D 01 00 07 05 12 F1
+20:23:16
+
+
+bpt on :
+always:
+007891AE
+
+mem alloc logging eax:
+0071482b
+
+and in :
+007147A0
+
+
+==
+mem_alloc=001d9070
+mem_alloc_str=02dd3a78
+
+
+===
+
+41 structure unpacked:
+
+001D9070  00 00 00 00 01 00 00 00 C0 58 0D E8 00 00 00 00  .......ÀX.è....
+001D9080  30 34 41 20 00 00 00 00 03 00 00 00 00 00 00 00  04A ...........
+001D9090  00 00 00 00 30 34 41 20 04 00 00 00 04 00 00 00  ....04A ......
+001D90A0  00 00 00 00 78 3A DD 02 32 00 00 00 00 00 00 00  ....x:Ý2.......
+001D90B0  07 00 00 00 05 00 00 00 00 00 00 00 30 34 41 20  ..........04A
+001D90C0  0D F0 AD BA 0D F0 AD BA 0D F0 AD BA 0D F0 AD BA  .ð-º.ð-º.ð-º.ð-º
+001D90D0  0D F0 AD BA 0D F0 AD BA 0D F0 AD BA 0D F0 AD BA  .ð-º.ð-º.ð-º.ð-º
+
+32 size:
+
+02DD3A78  41 04 00 01 0D 03 02 23 78 6F 74 65 67 5F 69 61  A..#xoteg_ia
+02DD3A88  6D 2F 24 78 6F 74 5F 69 61 6D 3B 64 63 61 61 61  m/$xot_iam;dcaaa
+02DD3A98  61 65 38 36 35 38 37 61 62 35 33 00 00 1C 01 00  ae86587ab53...
+02DD3AA8  1D 01 AB AB AB AB AB AB AB AB EE FE EE FE EE FE  <<<<<<<<îþîþîþ
+
+
+
+
+
+
+
+21:05:36 
+21:05:36 session_manager: [2ded] session cmd 109 received
+21:05:36 CommandSessionManager::session_command_received(02DB7358, 109, len=68): throttleq.size() = 0, rate = 0, cmd = 0, isid = 0, sid = 3893188800, seq = 0, v = 5, p = 0, d = 1
+21:05:36 CommandSessionManager::session_command_received: new session: username = xoteg_iam, sid = 3893188800
+21:05:36 CommandSessionManager::CommandSession::CommandSession(02E40DD0): created
+21:05:36 CommandSessionManager::accept: accepting 02E40DD0 to (02DB7358)/xoteg_iam, sid = 2776420155, remote_sid = 3893188800
+21:05:36 ChatManager::accept: accepting peer from session 02DB7358
+21:08:51 ChatPeer(,xoteg_iam:11b44ed518acb339,INIT)::recv onLetsBeSyncBuddies(#xoteg_iam/$xot_iam;dcaaaae86587ab53, 1, 1)
+21:08:51 ObjectStorage: Search #19 submitted. Type=sync, Storage=chat, Results=4294967295, Terms=(9=8,440='#xoteg_iam/$xot_iam;dcaaaae86587ab53')
+21:08:51 ObjectStorage: Search #19 finished. 0 results (0/38)
+21:08:51 ChatManager::onLetsBeSyncBuddies: no such chat as #xoteg_iam/$xot_iam;dcaaaae86587ab53, sending credentials request
+21:08:51 ChatPeer(,xoteg_iam:11b44ed518acb339,INIT)::sendSendMeCredentialsAndStuff ()
+21:08:51 
+
+
+
+

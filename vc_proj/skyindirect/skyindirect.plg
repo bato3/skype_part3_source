@@ -1,0 +1,59 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: skyindirect - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\user\LOCALS~1\Temp\RSP81.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"Q:\vc_proj\skyindirect\comm_sock.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\user\LOCALS~1\Temp\RSP81.tmp" 
+Creating temporary file "C:\DOCUME~1\user\LOCALS~1\Temp\RSP82.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib ws2_32.lib ms32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/skyindirect.pdb" /debug /machine:I386 /out:"Debug/skyindirect.exe" /pdbtype:sept 
+.\Debug\blob1.obj
+.\Debug\blob1s.obj
+.\Debug\blob2.obj
+.\Debug\blob2s.obj
+.\Debug\blob3s.obj
+.\Debug\blob4s.obj
+.\Debug\blob_enc.obj
+.\Debug\blob_newblk.obj
+.\Debug\crypto.obj
+.\Debug\miramax.obj
+.\Debug\rijndael.obj
+.\Debug\sha.obj
+.\Debug\Expand_IV.obj
+.\Debug\ext42.obj
+".\Debug\pack-4142.obj"
+".\Debug\unpack-4142.obj"
+.\Debug\comm_sock.obj
+.\Debug\decode41.obj
+.\Debug\process_cmd.obj
+.\Debug\skyindirect.obj
+.\Debug\skypush.obj
+.\Debug\skyrel.obj
+.\Debug\tcp_pkt.obj
+.\Debug\tcp_sess1.obj
+.\Debug\tcp_setup.obj
+.\Debug\udp_pkt.obj
+.\Debug\util.obj
+.\Debug\util_crc32.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\user\LOCALS~1\Temp\RSP82.tmp"
+<h3>Output Window</h3>
+Compiling...
+comm_sock.c
+Linking...
+
+
+
+<h3>Results</h3>
+skyindirect.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

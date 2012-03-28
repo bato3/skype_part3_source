@@ -1,0 +1,96 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: skypkt - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\USER~1.FAR\LOCALS~1\Temp\RSPC8.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\vc_proj\skypkt\blob1.c"
+"C:\vc_proj\skypkt\blob1s.c"
+"C:\vc_proj\skypkt\blob2.c"
+"C:\vc_proj\skypkt\blob2s.c"
+"C:\vc_proj\skypkt\blob3s.c"
+"C:\vc_proj\skypkt\blob4s.c"
+"C:\vc_proj\skypkt\blob_enc.c"
+"C:\vc_proj\skypkt\blob_newblk.c"
+"C:\vc_proj\skypkt\crc32_util.c"
+"C:\vc_proj\skypkt\crypto.c"
+"C:\vc_proj\skypkt\decode41.c"
+"C:\vc_proj\skypkt\Expand_IV.c"
+"C:\vc_proj\skypkt\miramax.c"
+"C:\vc_proj\skypkt\restore_key.c"
+"C:\vc_proj\skypkt\rijndael.c"
+"C:\vc_proj\skypkt\sha.c"
+"C:\vc_proj\skypkt\skypkt.c"
+"C:\vc_proj\skypkt\sock_comm.c"
+"C:\vc_proj\skypkt\tcp_sess1.c"
+"C:\vc_proj\skypkt\tcp_setup.c"
+"C:\vc_proj\skypkt\util.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\USER~1.FAR\LOCALS~1\Temp\RSPC8.tmp" 
+Creating temporary file "C:\DOCUME~1\USER~1.FAR\LOCALS~1\Temp\RSPC9.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib ws2_32.lib ms32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/skypkt.pdb" /debug /machine:I386 /out:"Debug/skypkt.exe" /pdbtype:sept 
+.\Debug\blob1.obj
+.\Debug\blob1s.obj
+.\Debug\blob2.obj
+.\Debug\blob2s.obj
+.\Debug\blob3s.obj
+.\Debug\blob4s.obj
+.\Debug\blob_enc.obj
+.\Debug\blob_newblk.obj
+.\Debug\crc32_util.obj
+.\Debug\crypto.obj
+.\Debug\decode41.obj
+.\Debug\Expand_IV.obj
+.\Debug\miramax.obj
+.\Debug\restore_key.obj
+.\Debug\rijndael.obj
+.\Debug\sha.obj
+.\Debug\skypkt.obj
+.\Debug\sock_comm.obj
+.\Debug\tcp_sess1.obj
+.\Debug\tcp_setup.obj
+.\Debug\util.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\USER~1.FAR\LOCALS~1\Temp\RSPC9.tmp"
+<h3>Output Window</h3>
+Compiling...
+blob1.c
+blob1s.c
+blob2.c
+blob2s.c
+blob3s.c
+blob4s.c
+blob_enc.c
+blob_newblk.c
+crc32_util.c
+crypto.c
+decode41.c
+Expand_IV.c
+miramax.c
+restore_key.c
+rijndael.c
+sha.c
+skypkt.c
+sock_comm.c
+tcp_sess1.c
+tcp_setup.c
+Generating Code...
+Compiling...
+util.c
+Generating Code...
+Linking...
+LINK : warning LNK4098: defaultlib "LIBC" conflicts with use of other libs; use /NODEFAULTLIB:library
+
+
+
+<h3>Results</h3>
+skypkt.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

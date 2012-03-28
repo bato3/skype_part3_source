@@ -1,0 +1,129 @@
+/* Win64 C version of mrmuldv.c */
+
+#include "miracl.h"
+
+mr_small muldiv(mr_small a,mr_small b,mr_small c,mr_small m,mr_small *rp)
+{
+    int i;
+    mr_small d,q=0,r=0;
+    d=m-a;
+    for (i=MIRACL/4;i>0;i--)
+    { /* do it bit by bit */
+        r<<=1;
+        if ((mr_utype)c<0) r++;
+        c<<=1;
+        q<<=1;
+        if ((mr_utype)b<0)
+        {
+            if (r>=m) { r-=d; q++; }
+            else        r+=a;
+        }
+        if (r>=m) { r-=m; q++; }
+        b<<=1;
+        r<<=1;
+        if ((mr_utype)c<0) r++;
+        c<<=1;
+        q<<=1;
+        if ((mr_utype)b<0)
+        {
+            if (r>=m) { r-=d; q++; }
+            else        r+=a;
+        }
+        if (r>=m) { r-=m; q++; }
+        b<<=1;
+        r<<=1;
+        if ((mr_utype)c<0) r++;
+        c<<=1;
+        q<<=1;
+        if ((mr_utype)b<0)
+        {
+            if (r>=m) { r-=d; q++; }
+            else        r+=a;
+        }
+        if (r>=m) { r-=m; q++; }
+        b<<=1;
+        r<<=1;
+        if ((mr_utype)c<0) r++;
+        c<<=1;
+        q<<=1;
+        if ((mr_utype)b<0)
+        {
+            if (r>=m) { r-=d; q++; }
+            else        r+=a;
+        }
+        if (r>=m) { r-=m; q++; }
+        b<<=1;
+    }
+    *rp=r;
+    return q;
+}
+
+mr_small muldvm(mr_small a,mr_small c,mr_small m,mr_small *rp)
+{ /* modified Blakely-Sloan */
+    register int i,carry;
+    register mr_small q=0,r=0;
+    r=a;
+    for (i=MIRACL/4;i>0;i--)
+    { /* do it bit by bit */
+        carry=0;
+        if ((mr_utype)r<0) carry=1;
+        r<<=1;
+        if ((mr_utype)c<0) r++;
+        c<<=1;
+        q<<=1;
+        if (carry || r>=m) { r-=m; q++; }
+        carry=0;
+        if ((mr_utype)r<0) carry=1;
+        r<<=1;
+        if ((mr_utype)c<0) r++;
+        c<<=1;
+        q<<=1;
+        if (carry || r>=m) { r-=m; q++; }
+        carry=0;
+        if ((mr_utype)r<0) carry=1;
+        r<<=1;
+        if ((mr_utype)c<0) r++;
+        c<<=1;
+        q<<=1;
+        if (carry || r>=m) { r-=m; q++; }
+        carry=0;
+        if ((mr_utype)r<0) carry=1;
+        r<<=1;
+        if ((mr_utype)c<0) r++;
+        c<<=1;
+        q<<=1;
+        if (carry || r>=m) { r-=m; q++; }
+    }
+    *rp=r;
+    return q;
+}
+
+#ifndef MR_NOFULLWIDTH
+
+/* These are now in-lined - see miracl.h */
+
+/*
+mr_small muldvd(mr_small a,mr_small b,mr_small c,mr_small *rp)
+{
+    mr_small q,r;
+    r=_umul128(a,b,&q);
+    r+=c;
+    q+=(r<c);
+    *rp=r;
+    return q;
+}
+
+void muldvd2(mr_small a,mr_small b,mr_small *c,mr_small *rp)
+{
+    mr_small q,r;
+    r=_umul128(a,b,&q);
+    r+=*c;
+    q+=(r<*c);
+    r+=*rp;
+    q+=(r<*rp);
+    *rp=r;
+    *c=q;
+}
+*/
+#endif
+

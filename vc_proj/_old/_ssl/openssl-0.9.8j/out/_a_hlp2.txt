@@ -1,0 +1,25 @@
+unknown option '-h'
+options are
+-c              to output the digest with separating colons
+-d              to output debug info
+-hex            output as hex dump
+-binary         output in binary form
+-sign   file    sign digest using private key in file
+-verify file    verify a signature using public key in file
+-prverify file  verify a signature using private key in file
+-keyform arg    key file format (PEM or ENGINE)
+-signature file signature to verify
+-binary         output in binary form
+-hmac key       create hashed MAC with key
+-engine e       use engine e, possibly a hardware device.
+-md5            to use the md5 message digest algorithm (default)
+-md4            to use the md4 message digest algorithm
+-md2            to use the md2 message digest algorithm
+-sha1           to use the sha1 message digest algorithm
+-sha            to use the sha message digest algorithm
+-sha224         to use the sha224 message digest algorithm
+-sha256         to use the sha256 message digest algorithm
+-sha384         to use the sha384 message digest algorithm
+-sha512         to use the sha512 message digest algorithm
+-mdc2           to use the mdc2 message digest algorithm
+-ripemd160      to use the ripemd160 message digest algorithm

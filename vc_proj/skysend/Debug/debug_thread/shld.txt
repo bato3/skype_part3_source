@@ -1,0 +1,58 @@
+
+
+
+
+        int a=10, b;
+        asm ("movl %1, %%eax; 
+              movl %%eax, %0;"
+             :"=r"(b)        /* output */
+             :"r"(a)         /* input */
+             :"%eax"         /* clobbered register */
+             );       
+
+===
+      
+        int eax1=10, edx1=20, ecx1=20
+        asm (
+             "movl %1, %%eax\n\t" 
+             "movl %2, %%edx\n\t" 
+             "movl %3, %%ecx\n\t"
+             "shldl %%cl, %%eax, %%edx\n\t"
+              movl %%edx, %0\n\t"
+             :"=r"(eax1) /* %0 output */
+             :"r"(eax1), "a" (edx1), "b" (ecx1)  /* %1 %2 %3input */
+             :"%eax","%edx","%ecx",
+             );       
+
+        eax=eax1;
+
+
+===
+
+A.153 SHLD, SHRD: Bitwise Double-Precision Shifts
+
+SHLD r/m16,reg16,imm8         ; o16 0F A4 /r ib      [386] 
+SHLD r/m16,reg32,imm8         ; o32 0F A4 /r ib      [386] 
+SHLD r/m16,reg16,CL           ; o16 0F A5 /r         [386] 
+SHLD r/m16,reg32,CL           ; o32 0F A5 /r         [386]
+
+SHRD r/m16,reg16,imm8         ; o16 0F AC /r ib      [386] 
+SHRD r/m32,reg32,imm8         ; o32 0F AC /r ib      [386] 
+SHRD r/m16,reg16,CL           ; o16 0F AD /r         [386] 
+SHRD r/m32,reg32,CL           ; o32 0F AD /r         [386]
+
+SHLD performs a double-precision left shift. 
+It notionally places its second operand to the right of its first, 
+then shifts the entire bit string thus generated to the left 
+by a number of bits specified in the third operand. 
+
+It then updates only the first operand according to the result of this.
+The second operand is not modified. 
+
+
+
+SHRD performs the corresponding right shift: it notionally places the second operand to the left of the first, shifts the whole bit string right, and updates only the first operand. 
+
+For example, if EAX holds 0x01234567 and EBX holds 0x89ABCDEF, then the instruction SHLD EAX,EBX,4 would update EAX to hold 0x12345678. Under the same conditions, SHRD EAX,EBX,4 would update EAX to hold 0xF0123456. 
+
+The number of bits to shift by is given by the third operand. Only the bottom 5 bits of the shift count are considered.

@@ -1,0 +1,12 @@
+008513E6 00000B58 MOV EBP,DWORD PTR DS:[EAX+EBX]            ; EBP=00000005
+mysub_jmp_tbl_attr_encoder
+008513E9 00000B58 PUSH EDX
+mysub_jmp_tbl_attr_encoder
+008513EA 00000B58 CALL Skype14.00927000
+copy_memory
+00927000 00000B58 PUSH EBP
+copy_memory
+00927001 00000B58 MOV EBP,ESP                               ; EBP=02C3EF60
+
+
+copy_memory

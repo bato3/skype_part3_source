@@ -1,0 +1,59 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: skyrecode - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\user\LOCALS~1\Temp\RSP19B.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"Q:\vc_proj\skyrecode\blobs\blob2s.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\user\LOCALS~1\Temp\RSP19B.tmp" 
+Creating temporary file "C:\DOCUME~1\user\LOCALS~1\Temp\RSP19C.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib ws2_32.lib ms32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/skyrecode.pdb" /debug /machine:I386 /out:"Debug/skyrecode.exe" /pdbtype:sept 
+.\Debug\blob1.obj
+.\Debug\blob1s.obj
+.\Debug\blob2.obj
+.\Debug\blob2s.obj
+.\Debug\blob3s.obj
+.\Debug\blob4s.obj
+.\Debug\blob_enc.obj
+.\Debug\blob_newblk.obj
+.\Debug\n_blob1s.obj
+.\Debug\crypto.obj
+.\Debug\miramax.obj
+.\Debug\rijndael.obj
+.\Debug\sha.obj
+.\Debug\Expand_IV.obj
+.\Debug\ext42.obj
+".\Debug\pack-4142.obj"
+".\Debug\unpack-4142.obj"
+.\Debug\comm_sock.obj
+.\Debug\decode41.obj
+.\Debug\process_cmd.obj
+.\Debug\recv_handling.obj
+.\Debug\recv_loop.obj
+.\Debug\recv_util.obj
+.\Debug\skyrecode.obj
+.\Debug\tcp_sess1.obj
+.\Debug\tcp_setup.obj
+.\Debug\util.obj
+.\Debug\util_crc32.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\user\LOCALS~1\Temp\RSP19C.tmp"
+<h3>Output Window</h3>
+Compiling...
+blob2s.c
+Linking...
+
+
+
+<h3>Results</h3>
+skyrecode.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

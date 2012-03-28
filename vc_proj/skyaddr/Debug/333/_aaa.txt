@@ -1,0 +1,54 @@
+slot: #61 (0x0000003D)
+nodes in slot: 10
+sending search request
+target node ip: 89.142.9.54
+timeout
+sending search request
+target node ip: 210.174.49.15
+timeout
+sending search request
+target node ip: 71.199.49.108
+timeout
+sending search request
+target node ip: 79.164.132.132
+timeout
+Len= 0x32c
+
+::CREDENTIALS::
+Skypename: cyberozz
+
+Profile:
+04-03: 21 bytes
+0000: 84 DC 91 84 3D 1B 1E 99 01 0A 00 00 2A 95 32 D9 | ....=.......*.2. |
+0010: 08 5F 41 22 A5                                  | ._A".            |
+03-14: "ozzman"
+03-24: "ru"
+03-28: "ru"
+03-40: "5c654db20e931d50336528788ab174df5ccc12ef"
+00-4D: 8C 5D 2B 45
+00-5F: 2D 00 00 00
+
+Learned new nodeinfo for cyberozz: ipflag: 0x1
+0x84dc91843d1b1e99-s-217.8.95.65:8869/10.0.0.42:38194 
+
+::CREDENTIALS::
+Skypename: cyberozz
+
+Profile:
+04-03: 21 bytes
+0000: 1B 85 9C 2F 32 F6 B0 CA 01 C0 06 98 02 E4 38 53 | .../2.........8S |
+0010: 84 03 8E B7 04                                  | .....            |
+03-14: "ozzman"
+03-24: "ru"
+03-28: "ru"
+03-40: "5c654db20e931d50336528788ab174df5ccc12ef"
+00-4D: 8C 5D 2B 45
+00-5F: 2D 00 00 00
+
+Learned new nodeinfo for cyberozz: ipflag: 0x1
+0x1b859c2f32f6b0ca-s-83.132.3.142:46852/192.6.152.2:58424 
+
+:: END ::
+
+our public ip: 78.37.51.152
+this is supernode

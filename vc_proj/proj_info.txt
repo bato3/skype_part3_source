@@ -1,0 +1,32 @@
+_miracl     - lib for rsa
+_ssl        - self build ssl
+_winpcap    - lib for dump
+arithmetic  - 42 decode, 1st ver
+chatsync    - send msg with synchronization on prev session
+decode41    - 41 decode, my 1st ver
+encode41    - 41 encode, make it for chat
+findslot    - find slot from skypename string.
+good42      - rupta version of 42 decode and encode, worked.
+miramax     - rsa sign/unsign utils
+pcap_dump   - lib for dump and includes
+pktsniff    - dump and decode packets
+skyaddr     - get/search profiles with ip port
+skyaddr2    - get only one exact profile from all nodes in slot
+skyaddr3    - search users by country
+skydirect   - supernode sender
+skydump     - dump supernodes via tcp (supernode tcp checker)
+skyemu      - my first try of emulator
+skyindirect - rewrited (prev skydirect) supernode sender
+skylogin    - rupta login code
+skynode     - just tcp connect
+skypkt      - sender with debug
+skypush     - udp push for supernode connect
+skyrecode   - recoded, send msg with synchronization on prev session
+skyrel      - connect to relay and wait for send via supernode 
+skysearch   - supernode udp checker
+skysend     - sender for threads
+skyslot     - for dump all slots.
+skyslot2    - for dump one slot
+skystatus   - ask for node status cmd
+test42      - for decode 42 via rupta code
+unpack41    - 41 decode, my 2st ver with recursive support.

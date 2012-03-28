@@ -1,0 +1,18 @@
+A.14 CBW, CWD, CDQ, CWDE: Sign Extensions
+
+CBW                           ; o16 98               [8086] 
+CWD                           ; o16 99               [8086] 
+
+CDQ                           ; o32 99               [386] 
+
+CWDE                          ; o32 98               [386]
+
+All these instructions sign-extend a short value into a longer one,
+by replicating the top bit of the original value to fill the extended one. 
+
+CBW extends AL into AX by repeating the top bit of AL in every bit of AH.
+
+CWD extends AX into DX:AX by repeating the top bit of AX throughout DX.
+CWDE extends AX into EAX, and 
+
+CDQ extends EAX into EDX:EAX.

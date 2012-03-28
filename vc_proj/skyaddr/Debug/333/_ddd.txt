@@ -1,0 +1,65 @@
+slot: #121 (0x00000079)
+nodes in slot: 10
+sending search request
+target node ip: 89.138.174.191
+timeout
+Len= 0x4f5
+
+::CREDENTIALS::
+Skypename: carlos.picoto
+
+Profile:
+04-03: 21 bytes
+0000: 0B FA 32 AD 5C 12 73 62 00 5F 5F 4B F3 7A EA BD | ..2.\.sb.__K.z.. |
+0010: BD AB 63 C2 2E                                  | ..c..            |
+03-14: "Carlos Picoto"
+03-24: "pp"
+03-28: "us"
+03-30: "Medina"
+03-40: "f0523f46c5d4c7792fcc36d1a2e28e5ffea25bc1"
+00-4D: FC C3 BE 44
+00-5F: 2C 00 00 00
+
+Learned new nodeinfo for carlos.picoto: ipflag: 0x0
+0xbfa32ad5c127362-s-189.189.171.99:49710/95.95.75.243:31466 
+
+::CREDENTIALS::
+Skypename: carlos.picoto
+
+Profile:
+04-03: 21 bytes
+0000: 0B FA 32 AD 5C 12 73 62 00 5F 5F 4B F3 7A EA BD | ..2.\.sb.__K.z.. |
+0010: BD AB 63 C2 2E                                  | ..c..            |
+03-14: "Carlos Picoto"
+03-24: "pp"
+03-28: "us"
+03-30: "Medina"
+03-40: "f0523f46c5d4c7792fcc36d1a2e28e5ffea25bc1"
+00-4D: FC C3 BE 44
+00-5F: 2C 00 00 00
+
+Learned new nodeinfo for carlos.picoto: ipflag: 0x0
+0xbfa32ad5c127362-s-189.189.171.99:49710/95.95.75.243:31466 
+
+::CREDENTIALS::
+Skypename: carlos.picoto
+
+Profile:
+04-03: 21 bytes
+0000: 0B FA 32 AD 5C 12 73 62 00 5F 5F 4B F3 7A EA BD | ..2.\.sb.__K.z.. |
+0010: BD AB 63 C2 2E                                  | ..c..            |
+03-14: "Carlos Picoto"
+03-24: "pp"
+03-28: "us"
+03-30: "Medina"
+03-40: "f0523f46c5d4c7792fcc36d1a2e28e5ffea25bc1"
+00-4D: FC C3 BE 44
+00-5F: 2C 00 00 00
+
+Learned new nodeinfo for carlos.picoto: ipflag: 0x0
+0xbfa32ad5c127362-s-189.189.171.99:49710/95.95.75.243:31466 
+
+:: END ::
+
+our public ip: 78.36.104.203
+this is supernode

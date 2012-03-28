@@ -1,0 +1,19 @@
+possible not all bytes decoded! (not found last 2 bytes of crc16)
+==============================================
+MY PKT tmp(old)101
+==============================================
+Session id:  0x0000FF3D (65341)
+Session cmd: 0x00000044 (68)
+MAIN: size(0x00000014)
+00000004 00000003 00000000 00320A60 | 00000015 
+
+next bytes: 0x00000004 0x00000003 0x00000000 0x00320A60 0x00000015 
+obj_type :  0x00000004
+obj_index:  0x00000003
+data:       0x00000000
+data_ptr:   0xALLOC001 0x00000015
+
+
+ALLOCATED: 1 size(0x00000015)
+BAA19719 A6C4F0C6 01C0A801 1CB3395F | 19C05178 A5000000 
+

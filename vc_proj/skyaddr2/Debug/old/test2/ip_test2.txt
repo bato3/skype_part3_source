@@ -1,0 +1,20 @@
+ckolbeck:24.9.41.180:49660 ok
+celester33:24.13.159.62:11665 ok
+binker781:71.186.184.109:50423 fail
+hanan.fahad.al.jahdali:74.73.16.158:64776 fail
+birdman3300:68.205.63.117:16542 ok portfail
+babygirlusa:75.118.23.222:58724 ok
+bernabialach:70.176.46.184:57452 fail
+allykat8789:74.195.67.137:7665 fail
+billy.pitzer:98.236.167.28:32018 fail
+francisco.garcia.h:68.108.96.18:31182 ok portfail
+cetvanbelle:24.113.156.140:47079 fail
+babaschild13:70.190.108.7:10198 fail
+dbareford:24.125.143.96:34265 ok
+beauxe:68.188.36.96:10915 fail
+graceelijah:71.202.212.163:63902 fail
+daylin87:72.37.141.228:46545 fail
+ahmed_bouzid:98.169.65.134:59493 fail
+brigitte.rwakabuba1:97.117.92.220:13067 ok portfial
+cricketknoll:173.75.248.35:38000 fail
+blackxnegro:98.166.168.174:48385 fail

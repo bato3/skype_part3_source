@@ -1,0 +1,74 @@
+slot: #61 (0x0000003D)
+nodes in slot: 10
+sending search request
+target node ip: 89.142.9.54
+timeout
+sending search request
+target node ip: 210.174.49.15
+timeout
+sending search request
+target node ip: 71.199.49.108
+timeout
+sending search request
+target node ip: 79.164.132.132
+timeout
+sending search request
+target node ip: 128.30.25.119
+timeout
+sending search request
+target node ip: 121.103.244.223
+timeout
+sending search request
+target node ip: 86.101.10.190
+timeout
+Len= 0x4d4
+
+::CREDENTIALS::
+Skypename: cyberozz2
+
+Profile:
+04-03: 27 bytes
+0000: D8 C9 BD F0 91 01 C9 6E 00 57 76 78 29 4D AA 54 | .......n.Wvx)M.T |
+0010: 13 BA 96 E8 5F 57 76 78 29 4D AA                | ...._Wvx)M.      |
+03-14: "cyberozz2"
+03-40: "5c654db20e931d50336528788ab174df5ccc12ef"
+00-4D: 01 00 00 00
+00-5F: 2E 00 00 00
+
+Learned new nodeinfo for cyberozz2: ipflag: 0x0
+0xd8c9bdf0911c96e-s-84.19.186.150:59487/87.118.120.41:19882 87.118.120.41:19882
+
+::CREDENTIALS::
+Skypename: cyberozz2
+
+Profile:
+04-03: 27 bytes
+0000: D8 C9 BD F0 91 01 C9 6E 00 57 76 78 29 4D AA 54 | .......n.Wvx)M.T |
+0010: 13 BA 96 E8 5F 57 76 78 29 4D AA                | ...._Wvx)M.      |
+03-14: "cyberozz2"
+03-40: "5c654db20e931d50336528788ab174df5ccc12ef"
+00-4D: 01 00 00 00
+00-5F: 2E 00 00 00
+
+Learned new nodeinfo for cyberozz2: ipflag: 0x0
+0xd8c9bdf0911c96e-s-84.19.186.150:59487/87.118.120.41:19882 87.118.120.41:19882
+
+::CREDENTIALS::
+Skypename: cyberozz2
+
+Profile:
+04-03: 27 bytes
+0000: D8 C9 BD F0 91 01 C9 6E 00 57 76 78 29 4D AA 54 | .......n.Wvx)M.T |
+0010: 13 BA 96 E8 5F 57 76 78 29 4D AA                | ...._Wvx)M.      |
+03-14: "cyberozz2"
+03-40: "5c654db20e931d50336528788ab174df5ccc12ef"
+00-4D: 01 00 00 00
+00-5F: 2E 00 00 00
+
+Learned new nodeinfo for cyberozz2: ipflag: 0x0
+0xd8c9bdf0911c96e-s-84.19.186.150:59487/87.118.120.41:19882 87.118.120.41:19882
+
+:: END ::
+
+our public ip: 78.37.51.152
+this is supernode

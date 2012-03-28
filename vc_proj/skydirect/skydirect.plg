@@ -1,0 +1,125 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: skydirect - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\user\LOCALS~1\Temp\RSP538.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"Q:\vc_proj\skydirect\crypto\crypto.c"
+"Q:\vc_proj\skydirect\crypto\miramax.c"
+"Q:\vc_proj\skydirect\crypto\rijndael.c"
+"Q:\vc_proj\skydirect\crypto\sha.c"
+"Q:\vc_proj\skydirect\blobs\blob1.c"
+"Q:\vc_proj\skydirect\blobs\blob1s.c"
+"Q:\vc_proj\skydirect\blobs\blob2.c"
+"Q:\vc_proj\skydirect\blobs\blob2s.c"
+"Q:\vc_proj\skydirect\blobs\blob3s.c"
+"Q:\vc_proj\skydirect\blobs\blob4s.c"
+"Q:\vc_proj\skydirect\blobs\blob_enc.c"
+"Q:\vc_proj\skydirect\blobs\blob_newblk.c"
+"Q:\vc_proj\skydirect\rc4\Expand_IV.c"
+"Q:\vc_proj\skydirect\SkypeControl\ext42.c"
+"Q:\vc_proj\skydirect\SkypeControl\pack-4142.c"
+"Q:\vc_proj\skydirect\SkypeControl\unpack-4142.c"
+"Q:\vc_proj\skydirect\comm_sock.c"
+"Q:\vc_proj\skydirect\comm_sock2.c"
+"Q:\vc_proj\skydirect\comm_sock3.c"
+"Q:\vc_proj\skydirect\decode41.c"
+"Q:\vc_proj\skydirect\process_cmd.c"
+"Q:\vc_proj\skydirect\skydirect.c"
+"Q:\vc_proj\skydirect\skypush.c"
+"Q:\vc_proj\skydirect\skyrel.c"
+"Q:\vc_proj\skydirect\tcp_pkt.c"
+"Q:\vc_proj\skydirect\tcp_sess1.c"
+"Q:\vc_proj\skydirect\tcp_setup.c"
+"Q:\vc_proj\skydirect\udp_pkt.c"
+"Q:\vc_proj\skydirect\util.c"
+"Q:\vc_proj\skydirect\util_crc32.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\user\LOCALS~1\Temp\RSP538.tmp" 
+Creating temporary file "C:\DOCUME~1\user\LOCALS~1\Temp\RSP539.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib ms32.lib ws2_32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/skydirect.pdb" /debug /machine:I386 /out:"Debug/skydirect.exe" /pdbtype:sept 
+.\Debug\crypto.obj
+.\Debug\miramax.obj
+.\Debug\rijndael.obj
+.\Debug\sha.obj
+.\Debug\blob1.obj
+.\Debug\blob1s.obj
+.\Debug\blob2.obj
+.\Debug\blob2s.obj
+.\Debug\blob3s.obj
+.\Debug\blob4s.obj
+.\Debug\blob_enc.obj
+.\Debug\blob_newblk.obj
+.\Debug\Expand_IV.obj
+.\Debug\ext42.obj
+".\Debug\pack-4142.obj"
+".\Debug\unpack-4142.obj"
+.\Debug\comm_sock.obj
+.\Debug\comm_sock2.obj
+.\Debug\comm_sock3.obj
+.\Debug\decode41.obj
+.\Debug\process_cmd.obj
+.\Debug\skydirect.obj
+.\Debug\skypush.obj
+.\Debug\skyrel.obj
+.\Debug\tcp_pkt.obj
+.\Debug\tcp_sess1.obj
+.\Debug\tcp_setup.obj
+.\Debug\udp_pkt.obj
+.\Debug\util.obj
+.\Debug\util_crc32.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\user\LOCALS~1\Temp\RSP539.tmp"
+<h3>Output Window</h3>
+Compiling...
+crypto.c
+miramax.c
+rijndael.c
+sha.c
+blob1.c
+blob1s.c
+blob2.c
+blob2s.c
+blob3s.c
+blob4s.c
+blob_enc.c
+blob_newblk.c
+Expand_IV.c
+ext42.c
+pack-4142.c
+q:\vc_proj\skydirect\skypecontrol\pack-4142.c(210) : warning C4305: 'function' : truncation from 'const int ' to 'char '
+q:\vc_proj\skydirect\skypecontrol\pack-4142.c(228) : warning C4305: 'function' : truncation from 'const int ' to 'char '
+unpack-4142.c
+comm_sock.c
+comm_sock2.c
+comm_sock3.c
+decode41.c
+Generating Code...
+Compiling...
+process_cmd.c
+skydirect.c
+skypush.c
+skyrel.c
+tcp_pkt.c
+tcp_sess1.c
+tcp_setup.c
+udp_pkt.c
+util.c
+util_crc32.c
+Generating Code...
+Linking...
+LINK : warning LNK4098: defaultlib "LIBC" conflicts with use of other libs; use /NODEFAULTLIB:library
+
+
+
+<h3>Results</h3>
+skydirect.exe - 0 error(s), 3 warning(s)
+</pre>
+</body>
+</html>

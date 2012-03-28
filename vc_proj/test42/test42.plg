@@ -1,0 +1,42 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: test42 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\user\LOCALS~1\Temp\RSP5C.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"Q:\vc_proj\test42\SkypeControl\pack-4142.c"
+"Q:\vc_proj\test42\SkypeControl\unpack-4142.c"
+"Q:\vc_proj\test42\ext42.c"
+"Q:\vc_proj\test42\test42.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\user\LOCALS~1\Temp\RSP5C.tmp" 
+Creating temporary file "C:\DOCUME~1\user\LOCALS~1\Temp\RSP5D.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib ws2_32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/test42.pdb" /debug /machine:I386 /out:"Debug/test42.exe" /pdbtype:sept 
+".\Debug\pack-4142.obj"
+".\Debug\unpack-4142.obj"
+.\Debug\ext42.obj
+.\Debug\test42.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\user\LOCALS~1\Temp\RSP5D.tmp"
+<h3>Output Window</h3>
+Compiling...
+pack-4142.c
+unpack-4142.c
+ext42.c
+test42.c
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+test42.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

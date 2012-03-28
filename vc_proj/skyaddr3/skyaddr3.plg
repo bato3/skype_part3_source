@@ -1,0 +1,61 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: skyaddr3 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\user\LOCALS~1\Temp\RSP312.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"Q:\vc_proj\skyaddr3\rc4\Expand_IV.c"
+"Q:\vc_proj\skyaddr3\SkypeControl\ext42.c"
+"Q:\vc_proj\skyaddr3\SkypeControl\pack-4142.c"
+"Q:\vc_proj\skyaddr3\SkypeControl\unpack-4142.c"
+"Q:\vc_proj\skyaddr3\comm_sock.c"
+"Q:\vc_proj\skyaddr3\country.c"
+"Q:\vc_proj\skyaddr3\miramax.c"
+"Q:\vc_proj\skyaddr3\skyaddr3.c"
+"Q:\vc_proj\skyaddr3\udp_pkt.c"
+"Q:\vc_proj\skyaddr3\util.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\user\LOCALS~1\Temp\RSP312.tmp" 
+Creating temporary file "C:\DOCUME~1\user\LOCALS~1\Temp\RSP313.tmp" with contents
+[
+ms32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib ws2_32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/skyaddr3.pdb" /debug /machine:I386 /out:"Debug/skyaddr3.exe" /pdbtype:sept 
+.\Debug\Expand_IV.obj
+.\Debug\ext42.obj
+".\Debug\pack-4142.obj"
+".\Debug\unpack-4142.obj"
+.\Debug\comm_sock.obj
+.\Debug\country.obj
+.\Debug\miramax.obj
+.\Debug\skyaddr3.obj
+.\Debug\udp_pkt.obj
+.\Debug\util.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\user\LOCALS~1\Temp\RSP313.tmp"
+<h3>Output Window</h3>
+Compiling...
+Expand_IV.c
+ext42.c
+pack-4142.c
+unpack-4142.c
+comm_sock.c
+country.c
+miramax.c
+skyaddr3.c
+udp_pkt.c
+util.c
+Generating Code...
+Linking...
+LINK : warning LNK4098: defaultlib "LIBC" conflicts with use of other libs; use /NODEFAULTLIB:library
+
+
+
+<h3>Results</h3>
+skyaddr3.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

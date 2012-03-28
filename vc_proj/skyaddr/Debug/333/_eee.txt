@@ -1,0 +1,63 @@
+slot: #1192 (0x000004A8)
+nodes in slot: 10
+sending search request
+target node ip: 143.248.147.161
+timeout
+Len= 0x4e3
+
+::CREDENTIALS::
+Skypename: danalford
+
+Profile:
+04-03: 27 bytes
+0000: 45 53 B8 A4 9A F8 36 FF 00 AD 30 CC 2D 55 9E AE | ES....6...0.-U.. |
+0010: 77 1C 92 C8 56 C2 E2 7D 57 B3 F7                | w...V..}W..      |
+03-14: "Dan Alford"
+03-24: "en"
+03-28: "us"
+03-40: "8c2f48e43fb706d0c102f54266a503384c61dbf1"
+00-4D: 4C 74 D8 48
+00-5F: 2D 00 00 00
+
+Learned new nodeinfo for danalford: ipflag: 0x0
+0x4553b8a49af836ff-s-174.119.28.146:51286/173.48.204.45:21918 194.226.125.87:46071
+
+::CREDENTIALS::
+Skypename: danalford
+
+Profile:
+04-03: 27 bytes
+0000: 45 53 B8 A4 9A F8 36 FF 00 AD 30 CC 2D 55 9E AE | ES....6...0.-U.. |
+0010: 77 1C 92 C8 56 C2 E2 7D 57 B3 F7                | w...V..}W..      |
+03-14: "Dan Alford"
+03-24: "en"
+03-28: "us"
+03-40: "8c2f48e43fb706d0c102f54266a503384c61dbf1"
+00-4D: 4C 74 D8 48
+00-5F: 2D 00 00 00
+
+Learned new nodeinfo for danalford: ipflag: 0x0
+0x4553b8a49af836ff-s-174.119.28.146:51286/173.48.204.45:21918 194.226.125.87:46071
+
+::CREDENTIALS::
+Skypename: danalford1
+
+Profile:
+04-03: 27 bytes
+0000: A7 9E 5A 6C 43 9F 1C 0C 01 C0 A8 01 64 37 4F 4A | ..ZlC.......d7OJ |
+0010: 8C CD 88 4E 0E 2A 3A 87 17 4F 71                | ...N.*:..Oq      |
+03-14: "Dan Alford"
+03-24: "en"
+03-28: "us"
+03-30: "Atlanta"
+03-40: "4973ba6e2529368eebee7fbc3c7c779604dc31d4"
+00-4D: 84 AD CF 49
+00-5F: 2D 00 00 00
+
+Learned new nodeinfo for danalford1: ipflag: 0x1
+0xa79e5a6c439f1cc-s-74.140.205.136:19982/192.168.1.100:14159 42.58.135.23:20337
+
+:: END ::
+
+our public ip: 78.36.104.203
+this is supernode

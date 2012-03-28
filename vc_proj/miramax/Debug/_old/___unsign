@@ -1,0 +1,31 @@
+unsign cred:
+Len: 0x00000100
+4B BB BB BB BB BB BB BB BB BB BB BB BB BB BB BB  ; K               
+ BB BB BB BB BB BB BB BB BB BB BB BB BB BB BB BB  ;                 
+ BB BB BB BB BB BB BB BB BB BB BB BB BB BB BB BB  ;                 
+ BB BB BB BB BB BB BB BB BB BB BA 41 05 03 00 64  ;            A   d
+ 6F 6D 69 6E 69 71 75 65 2E 64 69 76 69 6E 65 33  ; ominique.divine3
+ 38 31 39 00 00 03 00 04 01 80 01 20 00 00 00 3C  ; 819            <
+ C9 66 08 00 00 00 00 A7 27 97 38 BE 6A CF 2B 2C  ;  f      ' 8 j +,
+ 3F 82 8B A8 FF A2 15 C0 95 18 B9 15 85 B5 C9 CC  ; ?               
+ C8 36 27 E6 9A 45 82 D5 2B 3E 29 62 BA 25 49 4B  ;  6'  E  +>)b %IK
+ F2 8A 68 88 38 F0 7C 0A 52 AE 5C 2F 95 EF 6C 2E  ;   h 8 | R \/  l.
+ FA EC 7A 75 63 13 F8 E2 13 D7 E3 17 1B 3C 5E 97  ;   zuc        <^ 
+ 7B 56 B0 38 15 32 6E 44 C5 B8 AD 57 2C 9E D9 B0  ; {V 8 2nD   W,   
+ 0F A5 F9 33 A0 4A 0D 14 18 DF 0B BA F1 C6 1A 9A  ;    3 J          
+ AA CB F4 75 64 0A D5 47 7E B9 85 00 04 CE AE FA  ;    ud  G~       
+ 09 05 02 41 01 00 09 CE AE FA 09 4B 0D 09 56 35  ;    A       K  V5
+ DA A4 C2 74 5C EF E3 3A 3E 3C F4 7E 27 11 F5 BC  ;    t\  :>< ~'   
+ 
+data:
+Len: 0x00000080
+43 01 E7 55 89 AF 06 D2 AF 86 7F EA 2C E1 66 03  ; C  U       , f 
+ 7A AB 31 60 BE 1E A7 29 B9 46 62 9A 51 E2 9B 5E  ; z 1`   ) Fb Q  ^
+ 87 84 C2 90 33 79 F3 60 FB 19 46 60 AA 1E CE 13  ;     3y `  F`    
+ E5 C6 2D CD CA CA 98 56 52 6A 9B 45 C9 7B F7 A8  ;   -    VRj E {  
+ 97 60 9F C4 A9 E1 B4 29 9C 39 89 26 05 4E 7B 5B  ;  `     ) 9 & N{[
+ 33 99 FC 55 47 BB A5 3C 3F 6C F0 74 AF E1 D3 33  ; 3  UG  <?l t   3
+ 8E AE B8 74 E4 BD 65 03 09 F9 48 64 1E B7 5B 48  ;    t  e   Hd  [H
+ 32 1C EB F8 0F 50 AF EF FB 9B 27 BF AD 8F C3 C2  ; 2    P    '     
+ 
+Hello World!

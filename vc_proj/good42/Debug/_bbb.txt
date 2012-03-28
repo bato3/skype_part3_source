@@ -1,0 +1,25 @@
+before packed_bytes=68
+readed=1
+after packed_bytes=45
+before packed_bytes=40
+readed=1
+after packed_bytes=33
+before packed_bytes=30
+after readed=1
+00-0B: 2D 00 00 00
+00-0C: 2F E4 3B 30
+00-10: B0 9A 00 00
+02-11: 78.37.61.42:15070
+
+00-09: A6 DF F9 00
+00-00: 02 00 00 00
+00-01: 16 74 03 0F
+00-00: 00 01 00 00
+00-01: 3B 61 3E 01
+00-00: 03 00 00 00
+00-01: 67 CE DE 0D
+00-00: 04 00 00 00
+00-01: 02 00 00 00
+00-00: 05 00 00 00
+00-01: 27 00 00 00
+

@@ -1,0 +1,16 @@
+possible not all bytes decoded! (not found last 2 bytes of crc16)
+==============================================
+MY PKT tmp(old)101
+==============================================
+Session id:  0x0000DE81 (56961)
+Session cmd: 0x0000006D (109)
+MAIN: size(0x00000014)
+00000000 00000009 013D97CF 00000000 | 00000000 
+
+next bytes: 0x00000000 0x00000009 0x013D97CF 0x00000000 0x00000000 
+obj_type :  0x00000000
+obj_index:  0x00000009
+data:       0x013D97CF
+data_ptr:   0x00000000 0x00000000
+
+

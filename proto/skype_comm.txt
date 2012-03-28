@@ -1,0 +1,1038 @@
+
+  			SKYPE COMMUNICATIONS PROTO
+
+				    v0.1.5
+				  07/01/2009
+
+
+::::::::::::::::::::::::::::::::::HostScanner:::::::::::::::::::::::
+
+Localnode: creating hostscanner
+HostScanner: started (lastProbingFailed=0 probeFreq=5 parallConns=10 
+closenessThreshold=89)
+
+
+		        ::::::::::::::::::::::::
+			:::SEDNING PROBE(UDP):::
+		        ::::::::::::::::::::::::
+
+HostScanner: sending probe (addr=193.217.106.133:36234 time=0.0s)
+
+	CommLayer: Sending packet #0e19 to 193.217.106.133 using UDP
+
+LEN: 0x12
+
+	                         RC4
+0E 19 02 0F 46 85 C6 45 61 5E FC D5 EA 3D 50 D7 55 37
+                                 04 DA 01 0E 18 42 15
+
+
+1-2:pkt num
+3: tip dannih v pakete,(type of payload), 02 - obfusc rc4
+4-7: IV (initial vector for rc4)
+8-11: crc32
+12-18: rc4 obfusc
+12: len (0x04)  (len after cmd) 1+2(cmd)+4=7
+13-14: cmd num (see cmd.pl for decode in dec), 0xda01 ==cmd 27 (req conn.)
+15-16: (pkt num -1) = 0E 18
+17: encoding type 0x42
+18: obj (alltime 0x15)
+
+
+NOTE: rc4 uses public src, and destination ip, for key calculation.
+but how to know public ip ? At begining, it uses 0.0.0.0, if peer fail 
+to decrypt(bad crc). The peer sends a Nack with public ip.
+Now we know public ip. (see vanila skype pdf)
+
+		        :::::::::::::::::::::::::::::::::::::::::
+			::: 1-st Probe recv reply, Nack (UDP) :::
+			::: Nack recv (get public ip techniq) :::
+			::: (see vanila skype pdf)            :::
+		        :::::::::::::::::::::::::::::::::::::::::
+== 
+06:28:21 UDP: NACK #6d2c resending (00000000->4e2470b0)
+
+LEN: 0x0B 
+
+6D 2C 47 4E 24 70 B0 A9 8B 05 87
+
+1-2 : pkt num
+3:   type of payload,  47 (also 7,77 ?) -- UDP Nack.
+4-7:  src ip (4e2470b0) 78.36.112.176 (my_ip)
+8-11: newrnd (new random seed)
+
+NOTE:
+Nack - func(type of payload) & 8f = 7
+8-11 - remote side rnd, newrnd
+
+
+
+
+		        :::::::::::::::::::::::::::
+			::: NACK resending (UDP):::
+			::: 2-nd send UDP pkt   :::
+		        :::::::::::::::::::::::::::
+
+
+LEN: 0x0B
+                                                      RC4
+6D 2C 13 01 | A9 8B 05 87 | 53 47 20 5B | 4A DF 5D D8 4F 7B 05 C7 E5 3D 0C
+                                                      04 DA 01 6D 2B 42 15
+
+
+1-2:pkt num
+3: tip dannih v pakete,(type of payload), 13 (also 63, 23 ?) - resend
+4: adet (0x01) (from skype pdf) (fragment id ? number of resend ?)
+5-8: newrnd(from Nack)
+9-12: dst ip
+13-16: crc32
+17-23: rc4 (kak i v send probe pkt, toka perekodirovanno s izvestnim public ip)
+17: (0x04) len,  1+2(cmd)+4=7
+18-19: cmd num (see cmd.pl for decode in dec), 0xda01 == cmd 27
+20-21: (pkt num) - 1
+22: encoding type 0x42
+23: obj  (alltime 0x15)
+
+		        ::::::::::::::::::::::::::::::::::::
+			::: PROBE ACCEPT 2-nd recv (UDP) :::
+		        ::::::::::::::::::::::::::::::::::::
+
+06:28:21 CommLayer: Packet #b8d9 received from 83.71.32.91 using UDP
+06:28:21 CommLayer: Reply to #6d2b cmd $28
+06:28:21 HostScanner: probe accept received (addr=83.71.32.91:57947 time=0.0s)
+06:28:21 CommLayer: Deleting packet #6d2c
+
+LEN: 0x12
+                                 RC4
+B8 D9 02 56 BE 6B 5E 69 AA 0B BD 36 96 D2 07 74 0B 9B
+                                 04 E3 01 6D 2B 42 15
+
+
+1-2: pkt num
+3: tip dannih v pakete,(type of payload), 02 - obfusc rc4
+4-7: IV (initial vector for rc4)
+8-11: crc32
+12-18: rc4 obfusc
+12: (0x04) len, 1+2(cmd)+4=7
+13-14: cmd num (see cmd.pl for decode in dec), 0xe301 == cmd 28 (conn resp)
+15-16: pkt num iz tela send probe (reply on ..)
+17: encoding type 0x42
+18: obj (alltime 0x15)
+
+
+
+		        :::::::::::::::::::::::::::::::
+			::: TCP connecting,conected :::
+		        :::::::::::::::::::::::::::::::
+
+06:28:21 HostScanner: fallback+proxy-connecting (addr=83.71.32.91:57947 time=0.5s)
+06:28:21 TCP: OUT #1 83.71.32.91:57947 State CONNECTING
+06:28:21 TCP: OUT #1 83.71.32.91:57947 connecting (timeout=300000 now=5159140)
+06:28:21 FallbackConnManager: connecting to 83.71.32.91:57947
+06:28:21 FallbackConn: 83.71.32.91:57947/direct connecting to 83.71.32.91:57947...
+	
+06:28:21 FallbackConn: 83.71.32.91:57947/direct connected, handing over
+06:28:21 TCP: OUT #1 83.71.32.91:57947 connected -> 83.71.32.91:57947
+
+		        ::::::::::::::::::::::::
+			::: 1st send via tcp :::
+		        ::::::::::::::::::::::::
+
+LEN: 0x0E
+
+
+	     RC4
+79 8A 13 EC  AC 55 81 00  65 F2 94 9C  28 9B 
+             00 01 00 00  00 01 00 00  00 03
+
+
+1-4: rc4 tcp stream seed, used to decrypt 10 followed bytes.
+5-6:   00 01
+7-10:  00 00 00 01
+11-14: 00 00 00 03
+
+		        ::::::::::::::::::::::::
+                        ::: 1st recv via tcp :::
+		        ::::::::::::::::::::::::
+
+LEN: 0x46
+
+        0xDADB19EB 0x1443416B 0xB655AE97 0x0393 0xF9E0 
+	0xCF4C1A79 0xD4B47B19 0xF08DB6E3 0xF7D6BB24 
+	0x1A8AD448 0xA14B225C 0xD2E628F7 0xFD57390B 
+	0xC5F7B3E6 0x90EBB45B 0x546C7FEC 0x062F97B5 
+	0xD155E51E 0xDFBF
+
+
+STEP_PKT1:
+STEP_PKT2:
+
+LEN: 0x0A + 0x04 = 0x0E
+LEN: 2
+
+            RC4                              
+DA DB 19 EB 14 43 41 6B B6 55 AE 97 03 93 | F9 E0 
+            82 A0 00 00 00 01 00 00 00 03 | 6F 03 
+
+
+
+1-4:   remote side rc4 tcp stream seed.
+5-6 :  82 a0
+7-10:  00 00 00 01
+11-14: 00 00 00 03  (rc4,)
+15-16-..: 6f 03 (rc4,0)
+
+
+
+
+STEP_PKT3:
+
+LEN: 0x36
+
+RC4
+CF 4C 1A 79 D4 B4 7B 19 F0 8D B6 E3 F7 D6 BB 24 1A 8A D4 48 A1 4B 22 5C 
+8E 27 AC 2D 7A 23 78 89 26 DF 04 A5 92 5B 50 81 BE 97 5C 1D AA 93 28 79
+
+
+D2 E6 28 F7 FD 57 39 0B C5 F7 B3 E6 90 EB B4 5B 54 6C 7F EC 06 2F 97 B5
+56 4F B4 95 C2 CB 00 71 EE 07 0C 0D DA 03 D8 69 86 BF 64 85 F2 3B B0 61
+
+
+D1 55 E5 1E DF BF 
+1E 77 BC FD 0A 73 
+
+
+17-70: ????? crypto ? sign?
+
+
+
+06:28:21 TCP: OUT #1 83.71.32.91:57947 State CONNECTED
+==
+
+		        ::::::::::::::::::::::::
+		        ::: 2-nd send via tcp ::
+		        ::::::::::::::::::::::::
+
+06:28:21 CommLayer: Sending packet #6d30 to 83.71.32.91 using TCP
+
+LEN: 0x19
+
+RC4
+9C 39 B1 13 97 F2 F9 B3 6A DA 77 C6 03 AC 79 A8 3B D1 09 86 00 DC EF C1 09
+30 6D 30 13 F2 01 6D 2F 42 42 F2 7A 3B 4C D7 0F D5 6B 74 B3 CF 2B 9E 97 CB
+
+
+1: ? tip paketa, 30 tcp ?
+2-3: pkt num
+4: (13) len, (4+2(cmd)+13=19)
+5-6: cmd,  F2 01 == cmd 30
+7-8: pkt num - 1
+9: encoding type 0x42
+10-25: obj
+
+
+==
+		        :::::::::::::::::::::::::::::::
+			::: 2-nd recv via tcp        ::
+			::: CLIENT ACCEPT recv (TCP) ::
+		        :::::::::::::::::::::::::::::::
+
+LEN: 0x4C
+
+0x800B27A3 0xA81D943D 0xB67F3DB8 0xFD6B5265 
+0x272CF576 0xB9E8A680 0xCE38C687 0xE226A8D0 
+0x9B238369 0xB66D5306 0x52A07FB9 0xB0A5C843 
+0x517B66B2 0x8200570E 0xDA3C5868 0x71F65D5D 
+0x872CDF38 0x7B50F24F 0x689E9003
+
+
+STEP_PKT1:
+STEP_PKT2:
+
+LEN: 2
+LEN: 0x1D
+
+RC4
+80 0B | 27 A3 A8 1D  94 3D B6 7F  3D B8 FD 6B  52 65 27 2C 
+3C B8 | ED 19 FB 01  6D 2F 42 B1  25 F2 82 8A  B3 AC C0 D0
+
+
+F5 76 B9 E8  A6 80 CE 38  C6 87 E2 26  A8
+02 C0 EC 73  8F 27 2C B0  70 24 4E A0  04
+
+
+1: ???
+2-3: pkt num
+4: (0x19) len, (2+2(cmd)+19=1d)
+5-6: cmd num,  FB 01 == cmd 31
+7-8: pkt num iz tela send, 2-nd send via tcp(reply on ..)
+9: encoding type 0x42
+10-29: obj
+
+06:28:22 CommLayer: Packet #b8ed received from 83.71.32.91 using TCP
+06:28:22 CommLayer: Reply to #6d2f cmd $31
+06:28:22 HostScanner: client accept received (addr=83.71.32.91:57947 time=0.9s)
+06:28:22 HostScanner: stackVersion=44 stackTimestamp=802011429 port=57947 (addr=83.71.32.91:57947 time=0.9s)
+06:28:22 CommLayer: Deleting packet #6d30
+
+
+STEP_PKT3:
+STEP_PKT4:
+
+LEN: 2
+LEN: 0x2B
+
+
+RC4     
+D0 9B | 238369B6 6D530652 A07FB9B0 A5C84351 7B66B282 00570EDA 3C586871 F65D5D87
+58 B8 | EE075942 B09F39BC 4CDC1EF9 0242F643 86839F7C 2CB6EDEB 3C093BE8 F867662C
+                              | |    |
+
+2CDF387B 50F24F68 9E9003
+E6979AA0 B8C41784 87957C
+
+
+1: ??
+2-3: pkt num
+4: dlina (07)  (2+1(cmd)+7=a)
+5: cmd num 1 byte, 59 00 = cmd 11
+6: encoding type 0x42
+7-12: obj
+
+:::new pkt :::
+STEP_PKT5:
+
+13: dlina(1e) , (1+2(cmd)+1e=21 )
+14-15: cmd num, f9 02 = cmd 47
+6: encoding type 0x42
+7-37: obj
+
+06:28:22 CommLayer: Packet #b8ee received from 83.71.32.91 using TCP
+06:28:22 CommLayer: cmd $11
+06:28:22 Localnode: CommandReceived(cmd=$11) from 83.71.32.91:57947
+06:28:22 Localnode: network stats received (7917455 clients online)
+19:05:40 CommLayer: cmd $47
+
+06:28:22 HostScanner: connected! (addr=83.71.32.91:57947 time=1.3s)
+06:28:22 HostScanner: stopped at 1.3s (hosts=200 probed=2 responsive=2 connected=1 proxyconnected=1 closenessThreshold=89)
+===
+
+
+		        ::::::::::::::::::::::::::::::::::
+			::: 3 send via tcp             :::
+			::: ack to prev, i.e got #b8ee :::
+		        ::::::::::::::::::::::::::::::::::
+RC4
+85 D6 09 6D
+07 01 B8 EE
+
+06:28:22 HostScanner: destructed
+06:28:22 Localnode: status CONNECTING->CONNECTED
+==
+::::::::::::::::::::::::::::::::::HostScanner end:::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::Router::::::::::::::::::::::::::::::::
+cmd $6 -- ask for other nodes IP (supernodes)
+cmd $8 -- resp for other nodes ask.
+cmd $41 - tcp ping(tcp connect scan from inside)
+===
+
+
+		        :::::::::::::::::::::::::::::::::
+			::: Router cmd $6 N1(send tcp):::
+		        :::::::::::::::::::::::::::::::::
+
+Router: sent $6. nextHop=0 hops=1 routingID=19 dest=0x0000000000000000-d-0.0.0.0:0
+	CommLayer: Sending packet #6d32 to 83.71.32.91 using TCP
+
+LEN: 0B 
+
+RC4
+86 86 37 | F0 AF 50 9F 54 8E 24 98
+14 6D 32 | 06 32 6D 31 42 85 14 C9
+
+
+1: ??
+2-3: pkt num
+4: len, (1+1(cmd)+6=8) 
+5: cmd num 1byte, 32 == cmd 6 , esli perviy byte < 0x80 ,to 1 byte cmd ?
+6-7: (pkt num - 1) 
+8: encoding type 0x42
+9-11: obj
+
+
+
+			::::::::::::::::::::::::::::::::::::
+			:: Router cmd $37,$38,$6 send tcp ::
+			::::::::::::::::::::::::::::::::::::
+
+06:28:22 Router: sent $37. nextHop=0 hops=1 routingID=20 dest=0x0000000000000000-d-0.0.0.0:0 nolistener
+06:28:22 Router: sent $38. nextHop=0 hops=1 routingID=21 dest=0x0000000000000000-d-0.0.0.0:0 nolistener
+06:28:22 Router: sent $6. nextHop=0 hops=1 routingID=24 dest=0x0000000000000000-d-0.0.0.0:0
+
+CommLayer: Sending packet #6d33 to 83.71.32.91 using TCP
+
+
+LEN: 4
+LEN: 0x3E (0x42 total)
+
+ RC4
+ 71 24 A1 AF |  6097C773 EF0E1B7F 1CC3BD87 4D02BCB5 BA218544 D46D4314 
+ 80 01 6D 33 |  2CA90242 319A3144 C7D4F54F 66E112F1 CC2138A8 E47EE4A2
+
+
+ 533AAC27 4E403B21 80669FD6 A0311601 575D7F9C 523C1AD4 24835098 88CDDC86 
+ 2D39C6E0 223C4BB5 6F870FA3 A38FC9F4 457B9323 51B32D02 B1024215 08326D34
+                                                    |           |
+
+ 30D52AE3 462E
+ 423240F6 4FF7
+
+
+1: ??
+2: ??
+3-4: pkt num
+5: len (2c)
+6-7: cmd num, a9 02 == cmd 37
+8: encoding type 0x42
+9-51: obj
+
+
+52: len (02)
+53-54: cmd num , b1 02 == cmd 38 
+55: encoding type 0x42
+56: obj (0x15)
+
+
+57: len (08)
+58: cmd num , 32 == cmd 6
+59-60: pktnum + 1 
+61:  encoding type 0x42
+62-66 obj
+
+
+
+
+
+		::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::Router $cmd 6 $cmd 6 $cmd 6 $cmd 6 $cmd 6 send tcp::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+06:28:22 Router: sent $6. nextHop=0 hops=1 routingID=45 dest=0x0000000000000000-d-0.0.0.0:0
+06:28:22 Router: sent $6. nextHop=0 hops=1 routingID=46 dest=0x0000000000000000-d-0.0.0.0:0
+06:28:22 Router: sent $6. nextHop=0 hops=1 routingID=47 dest=0x0000000000000000-d-0.0.0.0:0
+06:28:22 Router: sent $6. nextHop=0 hops=1 routingID=48 dest=0x0000000000000000-d-0.0.0.0:0
+06:28:22 Router: sent $6. nextHop=0 hops=1 routingID=49 dest=0x0000000000000000-d-0.0.0.0:0
+
+06:28:22 CommLayer: Sending packet #6d36 to 83.71.32.91 using TCP
+
+LEN: 3
+LEN: 0x32
+
+RC4
+28 2E B2 | 8FB3DC92 E552D245 6E2AD34D E938951E BC6A8F73 7AD3B96F 6958E282
+68 6D 36 | 08326D35 4234AA09 F8EE0832 6D374234 CD9668EE 08326D38 423271B3
+
+19DDB62F 32DE142F 2F1281F1 547BE01C AD5C4206 2A52
+CFF70832 6D394234 A45B64EE 08326D3A 42331C63 25FA
+
+1: ??
+2-3: num pkt
+4: len (08=05obj+1cmd+2pktnum)
+5: cmd num. 32 == cmd 6
+6-7: pkt num -1
+8: encoding type 0x42
+9-13: obj (34 aa 09 f8 ee)
+
+
+new pkt(2)
+14: len (08)
+15: cmd num, 32 == cmd 6
+16-17: pkt num + 1
+18: encoding type 0x42
+19-23: obj (34 cd 96 68 ee)
+
+new pkt(3)
+24: len (08)
+25: cmd num, 32 == cmd 6
+26-27: pktnum + 2
+28: encoding type 0x42 
+29-33: obj (32 71 b3 cf f7)
+
+new pkt(4)
+34: len (08)
+35: cmd num, 32 == cmd 6
+36-17: pkt num + 3
+38: encoding type 0x42
+39-43: obj (34 a4 5b 64 ee)
+
+
+new pkt(5)
+44: len (08)
+45: cmd num, 32 == cmd 6
+46-47: pkt num + 4
+48: encoding type 0x42
+49-53: obj (33 1c 63 25 fa)
+
+===
+
+		::::::::::::::::::::::::::::::::::::::::::::::::
+		::: router $cmd 8 (reply to cmd $6) recv tcp :::
+		::::::::::::::::::::::::::::::::::::::::::::::::
+
+06:28:23 CommLayer: Packet #b905 received from 83.71.32.91 using TCP
+06:28:23 CommLayer: Reply to #6d31 cmd $8
+06:28:23 Router: reply $8 received. routingID=19
+
+LEN: 2
+LEN: 0x28e (total 0x290)
+
+RC4
+B9 03 |
+9C 0A | 
+
+RC4
+13D1E2F2 82CAD721 141FC80D 5BBE4115 095203DF F05464CA 1FCB7FA4 ......
+B9058905 436D3142 F8EBCE48 9B7B1E71 615CFBA8 7EF4B2BA F1D2889C ...... ~600 byte
+
+
+1-2: pkt num
+3-4: len ?? (89 05 == 81?)
+5: cmd num , 43 == cmd 8
+6-7: pkt num iz router sent $6 (reply on ..)
+8: encoding type 0x42
+9-656: obj
+
+
+06:28:23 SupernodePool: received slotinfo for slot #1155: nrofSnodesInSlot=11 nrofAddrs=6 new=6 total=6 (reqID=0)
+06:28:23 connect_addresses_t: 30 dead hosts thrown out
+06:28:23 connect_addresses_t: 30 hosts added, now 200 hosts total, geo stats (1 14 10 75)
+06:28:23 HostCache: hostlist updated (0 added, 0 modified, 0 deleted, 200 total)
+
+===
+
+			::::::::::::::::::::::::::::::::
+			::: Router $44 cmd , send udp:::
+			::::::::::::::::::::::::::::::::
+
+06:28:23 NatTracker: requesting node addresses from 89.0.5.119:3927 (cmdID=50)
+06:28:23 NatTracker: requesting node addresses from 163.1.56.165:50195 (cmdID=52)
+
+06:28:23 Router: sent $44. nextHop=1 hops=1 routingID=51 dest=0x0000000000000000-d-89.0.5.119:3927
+	CommLayer: Sending packet #6d3c to 89.0.5.119 using UDP
+
+LEN: 0x16
+
+                        RC4
+6D3C026A 81326DDF 88A036C5 56B3C6A0 76E41C42 B549
+		        08 E2026D3B 42B37993 96A0
+
+
+1-2: pkt num
+3: type of payload, 02 - rc4
+4-7: IV (initial vector for rc4)
+8-11: crc32
+12: rc4 obfusc
+12: len (08)
+13-14: cmd num, e2 02 == cmd 44
+15-16: pkt num - 1
+17: encoding type 0x42
+18-22: obj (b3 79 93 96 a0)
+
+
+			::::::::::::::::::::::::::::::::
+			::: Router $44 cmd , send udp:::
+			::::::::::::::::::::::::::::::::
+
+06:28:23 Router: sent $44. nextHop=1 hops=1 routingID=53 dest=0x0000000000000000-d-163.1.56.165:50195
+	 CommLayer: Sending packet #6d3e to 163.1.56.165 using UDP
+
+LEN: 0x16
+
+                        RC4
+6D3E020B 722CBABC 58950CF9 65EFB493 625E36C2 2881
+			08 E2026D3D 42B37993 96A0
+
+
+1-2: pkt num
+3: type of payload, 02 - rc4
+4-7: IV (initial vector for rc4)
+8-11: crc32
+12: rc4 obfusc
+12: len (08)
+13-14: cmd num, e2 02 == cmd 44
+15-16: pkt num - 1
+17: encoding type 0x42
+18-22: obj (b3 79 93 96 a0)
+
+
+		:::::::::::::::::::::::::::::::::::::::::::::::
+		:::Router $45 cmd (reply to cmd $44) recv udp::
+		:::::::::::::::::::::::::::::::::::::::::::::::
+
+06:28:23 CommLayer: Packet #9087 received from 163.1.56.165 using UDP
+06:28:23 CommLayer: Reply to #6d3d cmd $45
+06:28:23 Router: reply $45 received. routingID=53
+06:28:23 NatTracker: received 10 addrs, 10 unused (cmdID=52)
+06:28:23 SupernodePool: marking supernode 163.1.56.165:50195 CONFIRMED
+
+
+
+LEN: 0x0535 
+                        RC4
+9087029B 94EC84A0 4C214232 29D9909A CA044461 9B3583D7 497AAA20 25CBEF9F
+                        A6 0AEB026D 3D42FCDF 96B8B2CD CA01EF82 51B92E3D
+
+
+2E95918C D516E7D3 D8C045CC 2B77EF53 8782918F 6AAF79F7 ....  ~1280 byte
+CD41A884 74B20CAA FA29F731 DFBD000F DF276129 14E7C9C4 .... 
+
+
+1-2: pkt num
+3: type of payload, 02 - rc4
+4-7: IV for rc4
+8-11: crc32
+12-1333: rc4 obfusc
+12-13: len ? a6 0a = 164  
+14-15: cmd num, eb 02 == cmd 45
+16-17: pkt num from cmd $44 (reply on ..)
+18: encoding type 0x42
+19-1333: obj
+
+==
+
+...
+06:28:23 NatTracker: sent probe to 80.31.8.162:40013 (cmdID=54)
+06:28:23 NatTracker: sent probe to 83.146.205.225:40586 (cmdID=55)
+06:28:23 NatTracker: sent probe to 83.184.103.161:16762 (cmdID=56)
+06:28:23 NatTracker: sent probe to 92.37.165.110:36153 (cmdID=57)
+06:28:23 CommLayer: Sending packet #6d40 to 80.31.8.162 using UDP
+06:28:23 CommLayer: Sending packet #6d42 to 83.146.205.225 using UDP
+06:28:23 CommLayer: Sending packet #6d44 to 83.184.103.161 using UDP
+06:28:23 CommLayer: Sending packet #6d46 to 92.37.165.110 using UDP
+...
+
+
+		:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: Router cmd $8, reply on cmd $37,$38,$6           ::
+		:::                 and cmd $6,$6,$6,$6,$6 recv, tcp ::
+		:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+06:28:23 CommLayer: Packet #b911 received from 83.71.32.91 using TCP
+06:28:23 CommLayer: Reply to #6d34 cmd $8
+06:28:23 Router: reply $8 received. routingID=24
+06:28:23 SupernodePool: received slotinfo for slot #45: nrofSnodesInSlot=10 nrofAddrs=5 new=5 total=5 (reqID=23)
+06:28:23 CommLayer: Deleting packet #6d33
+
+
+LEN: (113 total)
+LEN: 2
+LEN: 0x2D
+
+RC4
+501B | 58E2 7026815B E93858BA 706CBD47 81A58B83 E76CD0CF 
+5CB9 | 112A 436D3442 F8EB97B8 72B72389 14BE3E83 424E9163
+
+
+
+
+078B744D 38F52B7C 4E21328A 49A66606 6AAC80D5 3062C5  
+D0647A08 DF95DC6F 4C459D54 49104CD6 C6897FB1 8E2766 
+
+
+
+
+1: ??
+2-3: pkt num
+4: len
+5: cmd num, 43 == cmd 8
+6-7: pkt num,  reply to ..
+8: encoding type 0x42
+9-39: obj
+
+
+
+LEN: 2
+LEN: 0xE2
+
+
+| 8E D3 | 4D14D2 49AE583A FFEB40DA E6448D5A A6E6C222 6000CACA 
+| C4 03 | B9122B 436D3542 F8EBDB70 BF5AAD25 C1AC83F2 E7446B2C
+
+
+
+
+BC1DED84 8F0A099F 586035F2 9DFD28C1 477BC205 C0EA2065 
+DF1DD80C 4B249294 5F184369 2F77CD0C 31A51614 C657C033
+                                                 |  |
+
+
+7C074BD2 E2113C7D 764D3A4B 3E53691A 1E8B56FA 69813014 
+2B436D3742 F8EBDF59 05BAAD25 C1AC06EC BE18B50C A644C254 
+
+
+
+C73AD85B 3F88BD33 C890BA52 55399E27 97D89343 68006982 
+28647E2B 35C9F090 331B1C18 A346BB16 C04A42A5 2A436D38
+                                             |
+
+05FEFC44 C197F54C 7150240E 43E5928D 03D75104 B79B1C17 
+42F8EB9D 13E9B723 89836A41 505D21D1 73B74B4B 2C89C3F6
+
+
+0F01B729 439B2841 C545C070 04402A50 60E8254C 429012DD 
+54C8F9C0 99132150 27F0E9E5 B51845A4 2B436D39 42F8EBDA
+
+
+64CE37F7 FF1F276B 90A6427E AA24B1D1 71827C1E 64E9EE63 
+D0DE12AD 25C1AC76 4DE7450C F81977F2 45FBA2F0 84A9589C 
+
+
+56B42077 F8FE0F55 B44BC2D3 58D21E64 B6FC5A7B 93342645 
+F326DD96 44B00F8E 34DED18C 772B436D 3A42F8EB AFBFA38D
+
+588E7086 923CDB9D 9FA5D6D9 FA272729 4B2CD9F5 89444CAF 
+EBB56AC7 7B0EE162 90080498 D356DBB4 60D03C4E 77898F18
+
+
+5DF52100 7966ABAA 95691641
+1654068E DE178A48 F3FE58D2
+
+
+40:??(c4)
+41:??(03)
+42-43: pkt num
+44: len(2b)
+45: cmd num 43 == cmd 8
+46-47:pkt num, in reply to
+48: encoding type 0x42
+49-82?: obj
+ 
+83:??
+84: ??
+85: len (2b)
+86: cmd num, 43 = cmd 8
+87-88: pktnum in reply to 
+89: encoding type 0x42
+90-130:
+
+..
+83:??
+84: ??
+85: len (2b)
+86: cmd num, 43 = cmd 8
+87-88: pktnum in reply to 
+89: encoding type 0x42
+90-130: obj..
+
+..
+
+
+06:28:23 CommLayer: Packet #b912 received from 83.71.32.91 using TCP
+06:28:23 CommLayer: Reply to #6d35 cmd $8
+06:28:23 Router: reply $8 received. routingID=45
+06:28:23 SupernodePool: received slotinfo for slot #1315: nrofSnodesInSlot=11 nrofAddrs=5 new=5 total=5 (reqID=36)
+06:28:23 CommLayer: Reply to #6d37 cmd $8
+
+==
+
+		::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: Mass router sent on diff ip, search?ping? send, udp:::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+06:28:23 Router: sent $18. nextHop=1 hops=1 routingID=59 dest=0x0000000000000000-d-76.16.73.84:50902
+06:28:23 Router: sent $18. nextHop=1 hops=1 routingID=61 dest=0x0000000000000000-d-66.131.62.190:37198
+06:28:23 Router: sent $18. nextHop=1 hops=1 routingID=63 dest=0x0000000000000000-d-76.111.220.149:40261
+
+06:28:23 Router: sent $14. nextHop=1 hops=1 routingID=65 dest=0x0000000000000000-d-76.16.73.84:50902
+06:28:23 Router: sent $14. nextHop=1 hops=1 routingID=67 dest=0x0000000000000000-d-66.131.62.190:37198
+06:28:23 Router: sent $14. nextHop=1 hops=1 routingID=69 dest=0x0000000000000000-d-76.111.220.149:40261
+
+06:28:23 Router: sent $14. nextHop=1 hops=1 routingID=71 dest=0x0000000000000000-d-12.205.119.47:42289
+06:28:23 Router: sent $14. nextHop=1 hops=1 routingID=73 dest=0x0000000000000000-d-12.216.29.223:9291
+06:28:23 Router: sent $14. nextHop=1 hops=1 routingID=75 dest=0x0000000000000000-d-24.190.236.6:3253
+06:28:23 Router: sent $14. nextHop=1 hops=1 routingID=77 dest=0x0000000000000000-d-84.194.68.166:25640
+06:28:23 Router: sent $14. nextHop=1 hops=1 routingID=79 dest=0x0000000000000000-d-93.80.65.106:53537
+06:28:23 Router: sent $14. nextHop=1 hops=1 routingID=81 dest=0x0000000000000000-d-80.33.19.153:61479
+06:28:23 Router: sent $14. nextHop=1 hops=1 routingID=83 dest=0x0000000000000000-d-88.169.132.240:62364
+06:28:23 Router: sent $14. nextHop=1 hops=1 routingID=85 dest=0x0000000000000000-d-69.242.119.25:41723
+06:28:23 Router: sent $14. nextHop=1 hops=1 routingID=87 dest=0x0000000000000000-d-98.225.14.123:2192
+06:28:23 Router: sent $14. nextHop=1 hops=1 routingID=89 dest=0x0000000000000000-d-84.22.24.143:36358
+
+06:28:23 SearchManager: starting search (objectID=40)
+06:28:23 Searcher: search #90 queued. targets=0 batch=1 maxqueries=1 exempt=1 terms={16='god.thoth'}
+06:28:23 Searcher: search #90 resultset 0: fields=2 minresults=4 splitfield=16 crcbits=32 ignore=0 extraattrs=0
+	 CommLayer: Sending packet #6d48 to 76.16.73.84 using UDP
+
+LEN: 0x3D
+
+
+
+                        RC4
+6D480285 C2FC1F62 AF4A631D 9D2CED62 F7B76217 01045934 75AD42EA CAE217A3 
+                        1B 92016D47 42F6231F A2A11B8D C2B269DC A965EB51 
+
+
+44082542 97E5CFC0 F4A06290 274FD508 717031FB 9AD95A32 52D027B7 FB
+147C54BA 69FACAE0 0412726D 4D42F623 1FA2A11B 8DC2B269 DE555BC8 92
+                    |
+
+1-2: pkt num
+3: type of payload, 02 - rc4
+4-7: IV (initial vector for rc4)
+8-11: crc32
+12-61: rc4 obfusc
+12: len  (1b)
+13-14: cmd num, 0x92 01 == cmd 18
+15-16: pkt num -1
+17: encoding type 0x42
+18-45: obj
+
+46: len (12)
+47: cmd num, 0x72 == cmd 14
+48-49: pktnum + 6 ?
+50: encoding type 0x42
+51-61: obj
+
+
+::::::::::::::::::::::::::::::::: skype session setup :::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::: session request, cmd $67, recv tcp :::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+06:57:32 CommLayer: Packet #ed8c received from 82.29.155.103 using TCP
+06:57:32 I:0x00006855 D:26709 
+06:57:32 I:0x00004546 D:17734 
+06:57:32 I:0x00000005 D:5 
+06:57:32 I:0x00007ADC D:31452 
+06:57:32 I:0x00000003 D:3 
+06:57:32 I:0x00000001 D:1 
+06:57:32 I:0x00000006 D:6 
+06:57:32 CommLayer: Query cmd $67 #ed8b
+06:57:32 session_manager: [29f5] accepted session request from 0x11b44ed518acb339-s-200.105.211.150:65072 (indirect)
+
+LEN : 0x54
+(cmd 67)
+LEN: 0x2
+LEN: 0xx52
+
+RC4 | 
+A401 ED8C4D9A 04ED8B42 DC3CE1B3 A37C17B4 2AB065EB 0x12F70518 0x1A02E348 0xC0B08943 0x3AB6674D 0x0395F1BC 0xF511B44E 0xD518ACB3 0x3901C0A8 0x0002A373 0xC869D396 0xFE30C6C5 0xE7636637 0x5268F963 0xD0CFD0D1 0xAD1C7C60 0x47B1
+
+1-84 - rc4 crypto
+
+1-2: ?? (a401 == 20 ?)
+3-4: pkt num (ed8c)
+5: obj len: 4d (all len 54?)
+6-7: cmd num, 9a04==cmd $67
+8-9: pkt num - 1, (ed8b)
+10: obj type (0x42)
+11-84: obj
+
+===
+
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::: session request relay establish, cmd $75, recv tcp :::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+06:57:34 CommLayer: Packet #ef9b received from 99.231.197.198 using TCP
+06:57:34 I:0x00000000 D:0 
+06:57:34 I:0x00002B01 D:11009 
+06:57:34 CommLayer: Reply to #03cc cmd $75
+06:57:34 session_manager: [29f5] relay 99.231.197.198:14182 established
+
+LEN: 0x1b
+RcvLen:1B                                || 
+0xF7DEDD24 0xCD171278 0x40004308 0x4903   DCAD 0xD937754B 0x06507838 0x18347FC1
+
+LEN: 0x2
+LEN: 0x0C
+
+RC4  |
+1AEF  9B08DB04 03CC42B5 DD5650E0
+
+1: ???
+2-3: pkt num (ef9b)
+4: obj len (8)
+5-6: cmd num db 04 == cmd $75
+7-8: reply to pkt: 03cc
+9: obj type: 0x42
+10-15: obj
+
+===
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::: session relay established, cmd $84, recv tcp :::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+06:57:34 CommLayer: Deleting packet #03cd
+06:57:34 CommLayer: Packet #ef9d received from 99.231.197.198 using TCP
+06:57:34 I:0x000029F5 D:10741 
+06:57:34 I:0x0000001E D:30 
+06:57:34 CommLayer: cmd $84
+06:57:35 session_manager: [29f5] relay 99.249.104.82:53200 established
+06:57:35 session_manager: [29f5] 2 reverse relay connects successful
+06:57:35 session_manager: [29f5] state REVERSE_CONNECTING-->HANDSHAKE_REPLY_SENT
+06:57:35 session_manager: [29f5] NAT types: local 0, remote 6
+
+LEN: 13
+LEN: 2
+LEN: 11
+DCAD D937754B 06507838 18347F
+
+RC4
+    |
+18EF 9D07A105 426AC26A 84C9C9
+
+
+1: ???
+2-3: pkt num, ef9d
+4: obj len, 7
+5-6: cmd num a105==cmd $84
+7: obj type 0x42
+8-13: obj
+
+===
+send ack ?
+06:57:34 BefCrT: 0x00000004
+06:57:34  0x0701EF9D
+06:57:34 AftCrT: 0x00000004
+06:57:34  0x918D4D01
+===
+
+===
+
+
+AFTER IT , USE stream, as RC4+AES ...
+
+===
+
+запрос профиля кстати cmd $14
+
+в cmd 15$ ответ с данными профиля
+
+
+
+
+
+
+::::::::::::::::::::::::::::::::: skype sess setup end ::::::::::::::::::::::
+
+                             ...NOT DONE YET...
+
+
+
+
+
+::::::::::::::::::::::::::::::::: skype tcp auth ::::::::::::::::::::::::::::
+
+				:::::::::::::::::::::::::::::::::
+				::: TCP auth in skype server ::::
+				:::::::::::::::::::::::::::::::::
+
+---
+06:28:22 EventServerInterface: 3 server(s) loaded from conf-binary. last=0.0.0.0:0
+06:28:22 EventServerInterface: connecting to 194.165.188.76:12350 (directly)
+06:28:22 FELayer: TCP: OUT #1 194.165.188.76:12350 added
+06:28:22 FallbackConnManager: connecting to 194.165.188.76:12350
+06:28:22 FallbackConn: 194.165.188.76:12350/direct connecting to 194.165.188.76:12350...
+---
+				::: ack?(ssl?) send tcp ::
+
+LEN: 5
+
+16 03 01 00 00
+
+1-5: ??
+
+				::: ack?(ssl?) recv tcp ::
+
+LEN: 5
+
+17 03 01 00 00
+
+1-5: ??
+
+
+06:28:23 FallbackConn: 194.165.188.76:12350/direct connected, handing over
+06:28:23 FELayer: TCP: OUT #1 194.165.188.76:12350 connected -> 194.165.188.76:12350
+
+06:28:23 EventServerInterface: connected to 194.165.188.76:12350
+06:28:23 EventServerInterface: authenticating
+06:28:23 EventServerInterface: sendTcpRequest(code=$6028,felayerID=#1)
+
+			::: send auth data tcp :::
+
+06:28:23 sendm: 0x00000129 
+06:28:23  0x16030100 0xCD410300 0x09804004 0x08C00150 0x32EE1CAA 0x02F54E35 0xDC1D31CB 0x39F90059 0xE89C4DDA 0xC7D4CF37 0x9CC576AE 0x3627AB60 0xE8A79C8C 0x3DFCAA4B 0xEF548D14 0xDCDB84AF 0x28ECE630 0x27AD53FC 0xCD78CDA8 0x3F03666D 0x34DFAE6A 0x604F3DD7 0x0C731FC0 0xA6CCF204 0xE547D69D 0xAACF2438 0x7F16E808 0x5E9356D6 0x70F67FAC 0xA9869204 0x26AEE6E2 0xEB7B261D 0x5D6EEFFC 0x2BB9F9F2 0x1B2EC492 0xB78C618C 0xFACE58D8 0x0D3E7C9A 0x1BDFFE14 0xE4377929 0xB4645E66 0x192D84B6 0x7E9E51DB 0xF61C2094 0x3A34428B 0x30D574F2 0x2322C5B6 0x30AE22F6 0x0E02152C 0xD896B635 0xB3296CBB 0xAB226400 0x0C011703 0x010052E1 0xEB0C33ED 0xDFAB9A4F 0x5A521C27 0xFC2AF52E 0xEC93D2B1 0xB58BBE89 0xE8F5BCFF 0x5922D71C 0xE0E8364B 0x9025E44E 0xCBD59FF9 0xD72B349F 0x821EB674 0x8055608B 0xCD96910B 0x69F9AFBA 0x4EB2C816 0xF231F9B6 0x7DBC53C5 0x43722FFF 0x7D000000
+
+
+06:28:23 bsetup::update: keys updated, writing to C:\Documents and Settings\user.NEW\Application Data\Skype\shared.xml, 245 total keys in memory, file size = 27529, serial_no = 2624
+06:28:23 bsetup::update: keys updated, writing to C:\Documents and Settings\user.NEW\Application Data\Skype\xot_iam\config.xml, 209 total keys in memory, file size = 9150, serial_no = 3938
+
+
+
+::::::::::::::::::::::::::::::::end skype tcp auth:::::::::::::::::::::::::::::::::
+
+
+APPENDIX A.
+
+decode 2 hex in dec cmd num:
+
+#!perl
+
+#$b1=0xda;
+#$b2=0x01;
+#27
+
+#$b1=0xe2;
+#$b2=0x02;
+#44
+
+#$b1=0xa1;
+#$b2=0x05;
+#84
+
+#$b1=0xf2;
+#$b2=0x01;
+#30
+
+#$b1=0x59;
+#$b2=0x00;
+#11
+
+#$b1=0x32;
+#$b2=0x00;
+#6
+
+#$b1=0xa9;
+#$b2=0x02;
+#37
+
+#$b1=0x47;
+#$b2=0x00;
+#8
+
+#$b1=0xe3;
+#$b2=0x01;
+#28
+
+#$b1=0xf9;
+#$b2=0x02;
+#47
+
+$b1=0x9a;
+$b2=0x02;
+#35
+
+$byte1 = sprintf("%d", $b1);  
+$byte2 = sprintf("%d", $b2);  
+
+$t1 = $byte1 & 127;
+$t2 = $byte2 & 127;
+$t2 = $t2 * 128;
+$ts = $t1 | $t2;
+$tres = $ts >> 3;
+
+print "$tres\n";
+

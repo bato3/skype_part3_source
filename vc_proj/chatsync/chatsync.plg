@@ -1,0 +1,117 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: chatsync - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\user\LOCALS~1\Temp\RSP19.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"Q:\vc_proj\chatsync\blobs\blob1.c"
+"Q:\vc_proj\chatsync\blobs\blob1s.c"
+"Q:\vc_proj\chatsync\blobs\blob2.c"
+"Q:\vc_proj\chatsync\blobs\blob2s.c"
+"Q:\vc_proj\chatsync\blobs\blob3s.c"
+"Q:\vc_proj\chatsync\blobs\blob4s.c"
+"Q:\vc_proj\chatsync\blobs\blob_enc.c"
+"Q:\vc_proj\chatsync\blobs\blob_newblk.c"
+"Q:\vc_proj\chatsync\blobs\n_blob1s.c"
+"Q:\vc_proj\chatsync\crypto\crypto.c"
+"Q:\vc_proj\chatsync\crypto\miramax.c"
+"Q:\vc_proj\chatsync\crypto\rijndael.c"
+"Q:\vc_proj\chatsync\crypto\sha.c"
+"Q:\vc_proj\chatsync\rc4\Expand_IV.c"
+"Q:\vc_proj\chatsync\SkypeControl\ext42.c"
+"Q:\vc_proj\chatsync\SkypeControl\pack-4142.c"
+"Q:\vc_proj\chatsync\SkypeControl\unpack-4142.c"
+"Q:\vc_proj\chatsync\chatsync.c"
+"Q:\vc_proj\chatsync\comm_sock.c"
+"Q:\vc_proj\chatsync\decode41.c"
+"Q:\vc_proj\chatsync\process_cmd.c"
+"Q:\vc_proj\chatsync\recv_handling.c"
+"Q:\vc_proj\chatsync\recv_loop.c"
+"Q:\vc_proj\chatsync\recv_util.c"
+"Q:\vc_proj\chatsync\tcp_sess1.c"
+"Q:\vc_proj\chatsync\tcp_setup.c"
+"Q:\vc_proj\chatsync\util.c"
+"Q:\vc_proj\chatsync\util_crc32.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\user\LOCALS~1\Temp\RSP19.tmp" 
+Creating temporary file "C:\DOCUME~1\user\LOCALS~1\Temp\RSP1A.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib ws2_32.lib ms32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/chatsync.pdb" /debug /machine:I386 /out:"Debug/chatsync.exe" /pdbtype:sept 
+.\Debug\blob1.obj
+.\Debug\blob1s.obj
+.\Debug\blob2.obj
+.\Debug\blob2s.obj
+.\Debug\blob3s.obj
+.\Debug\blob4s.obj
+.\Debug\blob_enc.obj
+.\Debug\blob_newblk.obj
+.\Debug\n_blob1s.obj
+.\Debug\crypto.obj
+.\Debug\miramax.obj
+.\Debug\rijndael.obj
+.\Debug\sha.obj
+.\Debug\Expand_IV.obj
+.\Debug\ext42.obj
+".\Debug\pack-4142.obj"
+".\Debug\unpack-4142.obj"
+.\Debug\chatsync.obj
+.\Debug\comm_sock.obj
+.\Debug\decode41.obj
+.\Debug\process_cmd.obj
+.\Debug\recv_handling.obj
+.\Debug\recv_loop.obj
+.\Debug\recv_util.obj
+.\Debug\tcp_sess1.obj
+.\Debug\tcp_setup.obj
+.\Debug\util.obj
+.\Debug\util_crc32.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\user\LOCALS~1\Temp\RSP1A.tmp"
+<h3>Output Window</h3>
+Compiling...
+blob1.c
+blob1s.c
+blob2.c
+blob2s.c
+blob3s.c
+blob4s.c
+blob_enc.c
+blob_newblk.c
+n_blob1s.c
+crypto.c
+miramax.c
+rijndael.c
+sha.c
+Expand_IV.c
+ext42.c
+pack-4142.c
+unpack-4142.c
+chatsync.c
+comm_sock.c
+decode41.c
+Generating Code...
+Compiling...
+process_cmd.c
+recv_handling.c
+recv_loop.c
+recv_util.c
+tcp_sess1.c
+tcp_setup.c
+util.c
+util_crc32.c
+Generating Code...
+Linking...
+LINK : warning LNK4098: defaultlib "LIBC" conflicts with use of other libs; use /NODEFAULTLIB:library
+
+
+
+<h3>Results</h3>
+chatsync.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

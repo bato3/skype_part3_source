@@ -1,0 +1,49 @@
+BLOBs setup1pkt encoded successfully
+BLOBs setup2pkt encoded successfully
+possible not all bytes decoded! (not found last 2 bytes of crc16)
+==============================================
+RECURS PKT:
+==============================================
+Session id:  0x00006406 (25606)
+Session cmd: 0x0000006D (109)
+MAIN: size(0x00000050)
+00000000 00000001 0000000D 00000000 | 00000000 00000003 00000002 00000000 
+00320A60 00000025 00000000 0000001C | 00000001 00000000 00000000 00000000 
+0000001D 00000001 00000000 00000000 | 
+
+next bytes: 0x00000000 0x00000001 0x0000000D 0x00000000 0x00000000 
+obj_type :  0x00000000
+obj_index:  0x00000001
+data:       0x0000000D
+data_ptr:   0x00000000 0x00000000
+
+next bytes: 0x00000003 0x00000002 0x00000000 0x00320A60 0x00000025 
+obj_type :  0x00000003
+obj_index:  0x00000002
+data:       0x00000000
+data_ptr:   0xALLOC001 0x00000025
+
+next bytes: 0x00000000 0x0000001C 0x00000001 0x00000000 0x00000000 
+obj_type :  0x00000000
+obj_index:  0x0000001C
+data:       0x00000001
+data_ptr:   0x00000000 0x00000000
+
+next bytes: 0x00000000 0x0000001D 0x00000001 0x00000000 0x00000000 
+obj_type :  0x00000000
+obj_index:  0x0000001D
+data:       0x00000001
+data_ptr:   0x00000000 0x00000000
+
+
+ALLOCATED: 1 size(0x00000025)
+23786F74 65675F69 616D2F24 786F745F | 69616D3B 34666566 37623031 35636232 
+30616430 00 
+
+blob
+Len: 0x00000010
+86 C8 01 6D 41 04 00 01 87 BF 86 AC 05 00 03 00 
+ 
+blob
+Len: 0x00000009
+41 04 00 01 87 BF 86 AC 05 

@@ -1,0 +1,102 @@
+
+show public key
+openssl.exe rsa -in _xoteg_pub.der -inform der -pubin  -text
+openssl.exe rsa -in _pubkey.txt -pubin  -text
+
+openssl.exe rsa -in _xot_pub.der -inform der -pubin  -text
+
+
+show private key
+openssl.exe rsa -in _seckey1024.txt -text | more
+
+convert to der
+openssl.exe rsa -in _seckey1024.txt -pubout -outform der -out _pubkey.der
+
+
+
+::encrypt with public::
+openssl.exe rsautl  -inkey _xoteg_pub.der -keyform der -pubin -encrypt  -in _myin.txt -out _myout.txt -raw
+
+openssl.exe rsautl  -inkey _xot_pub.der -keyform der -pubin -encrypt -in _myin_signed.txt -out _myout_signed.txt -raw
+
+
+decrypt with secret as public
+openssl.exe rsautl  -inkey _xoteg_sec.der -keyform der -pubin -encrypt  -in _myout.txt -out _myout2.txt -raw
+
+
+
+asn1 parse
+openssl.exe asn1parse -in _pubkey.der -inform der
+openssl.exe asn1parse -in _seckey1024.der -inform der
+openssl.exe asn1parse -in _xoteg_sec.der -inform der
+openssl.exe asn1parse -in _xot_sec.der -inform der
+
+::decrypt with secret::
+openssl.exe rsautl  -inkey _xoteg_sec.der -keyform der  -decrypt  -in _myout.txt -out _myout22.txt -raw
+openssl.exe rsautl  -inkey _xoteg_sec.der -keyform der  -decrypt  -in _myin_signed.txt -out _myout_signed.txt -raw
+
+openssl.exe rsautl  -inkey _xoteg_sec.der -keyform der  -decrypt  -in _myin_encode.txt -out _myout_decode.txt -raw
+
+
+openssl.exe rsautl  -inkey _xot_sec_new.der -keyform der  -decrypt  -in _myin6d2n.txt -out _myout6d2n.txt -raw
+
+
+
+
+openssl.exe rsautl  -inkey _xoteg_pub.der -keyform der  -decrypt  -in _myin451.txt -out _myout451.txt -raw
+
+openssl.exe rsautl  -inkey _xot_sec.der -keyform der  -decrypt  -in _myin452.txt -out _myout452.txt -raw
+
+
+openssl.exe rsautl  -inkey _xot_sec_pub.der -keyform der  -decrypt  -in _myin_signed.txt -out _myout_signed.txt -raw
+
+
+!!!
+pkt 45, 0x80 vtoroy
+openssl.exe rsautl  -inkey _xot_sec.der -keyform der  -decrypt  -in _myin452.txt -out _myout452.txt -raw
+!!!
+
+::md5::
+openssl.exe md5 <_a_md5n.txt
+
+::sign::
+!!!
+openssl.exe rsautl  -inkey _xot_sec.der -keyform der  -sign  -in _myin_sign.txt -out _myout_sign.txt -raw
+!!!
+
+!!!
+openssl.exe rsautl  -inkey _xoteg_sec.der -keyform der  -sign  -in _myin6d2nn.txt -out _myout6d2nn.txt -raw
+!!!
+openssl.exe rsautl  -inkey _xoteg_sec_new.der -keyform der  -sign  -in _myin6d2nnn.txt -out _myout6d2nnn.txt -raw
+openssl.exe rsautl  -inkey _xoteg_sec.der -keyform der  -sign  -in _myin6d2nnnn.txt -out _myout6d2nnnn.txt -raw
+
+openssl.exe rsautl  -inkey _xoteg_sec.der -keyform der  -sign  -in _myin_cred.txt -out _myout_cred.txt -raw
+
+
+openssl.exe rsautl  -inkey _xot_pub.der -keyform der -pubin -sign -in _myin_signed2.txt -out _myout_signed.txt -raw
+
+
+===
+openssl dgst -sha1 < _myin_sha1.txt 
+
+!!! rabotaet !!!
+openssl dgst -sha1 < _myin_sha1_2.txt
+
+openssl dgst -sha1 < _myin_nonce.txt
+
+C:\vc_proj\_ssl\openssl-0.9.8j\out>openssl dgst -sha1 < _myin_sha1_2.txt
+e9268e384c3c0630f8d9a4bf4763dcb84c33cf2c
+
+
+openssl dgst -sha1 < _myin_nonce.txt
+a0171544acf997e2d9fc23039f0cb0978d472dea
+
+===========
+openssl dgst -sha1 < _myin_sha1_3.txt
+a201a46b2a4c1a2f713b3249f32007ebf9e6e92e
+
+
+
+
+
+

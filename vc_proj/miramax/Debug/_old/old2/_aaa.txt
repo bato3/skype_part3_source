@@ -1,0 +1,42 @@
+unsign cred:
+Len: 0x00000100
+4B BB BB BB BB BB BB BB BB BB BB BB BB BB BB BB  ; K               
+ BB BB BB BB BB BB BB BB BB BB BB BB BB BB BB BB  ;                 
+ BB BB BB BB BB BB BB BB BB BB BB BB BB BB BB BB  ;                 
+ BB BB BB BB BB BB BB BB BB BB BB BB BB BB BB BA  ;                 
+ 41 05 03 00 73 68 61 6D 61 6E 79 73 74 00 00 03  ; A   shamanyst   
+ 22 04 01 80 01 D1 4C F9 8B 88 58 38 57 B1 58 D1  ; "     L   X8W X 
+ CE 98 C5 1B B0 A0 61 7A 36 98 AF FA ED A8 25 0A  ;       az6     % 
+ 94 B6 85 1B 87 EC F4 E9 99 3A 86 B0 3E 8F BD 01  ;          :  >   
+ 15 82 82 A5 00 52 8B F4 E8 15 AD 2E 0E 4C 72 35  ;      R     . Lr5
+ EB 8E FF 71 17 DB 90 19 1F D6 CA C0 84 B8 BA 1C  ;    q            
+ A7 B6 9A AB 1C C7 99 CD 8E 4A 57 FB 83 E1 20 43  ;          JW    C
+ 79 44 5E 03 3A BB 61 E5 C4 5B 10 5A 1C E0 39 E6  ; yD^ : a  [ Z  9 
+ ED 29 AA 79 90 9A 1C 9F 77 DA 85 3A 70 FD D1 ED  ;  ) y    w  :p   
+ D0 B7 ED 07 C9 00 04 A6 BE FF 09 05 02 41 02 00  ;              A  
+ 01 A6 BE FF 09 00 09 A6 BE FF 09 39 BF 4E E2 CC  ;            9 N  
+ 43 B9 7B CE 57 DA 9E 1F DF A9 41 C9 C4 17 84 BC  ; C { W     A     
+ 
+pubkey data:
+Len: 0x00000080
+D1 4C F9 8B 88 58 38 57 B1 58 D1 CE 98 C5 1B B0  ;  L   X8W X      
+ A0 61 7A 36 98 AF FA ED A8 25 0A 94 B6 85 1B 87  ;  az6     %      
+ EC F4 E9 99 3A 86 B0 3E 8F BD 01 15 82 82 A5 00  ;     :  >        
+ 52 8B F4 E8 15 AD 2E 0E 4C 72 35 EB 8E FF 71 17  ; R     . Lr5   q 
+ DB 90 19 1F D6 CA C0 84 B8 BA 1C A7 B6 9A AB 1C  ;                 
+ C7 99 CD 8E 4A 57 FB 83 E1 20 43 79 44 5E 03 3A  ;     JW    CyD^ :
+ BB 61 E5 C4 5B 10 5A 1C E0 39 E6 ED 29 AA 79 90  ;  a  [ Z  9  ) y 
+ 9A 1C 9F 77 DA 85 3A 70 FD D1 ED D0 B7 ED 07 C9  ;    w  :p        
+ 
+unsign data:
+Len: 0x00000080
+ 4A C5 8C 69 89 42 69 91 1F 7F 82 2A C8 FF 6D 11  ; J  i Bi   *  m 
+ B9 52 19 D6 76 42 C3 A0 34 85 8E 77 85 2C 7B 1A  ;  R  vB  4  w ,{ 
+ 97 E1 16 D0 B8 65 72 DC E2 D0 65 1D 49 28 7E 7E  ;      er   e I(~~
+ AD 2B 9D BF D7 86 F2 F1 3F 46 B7 66 D5 2C 53 E9  ;  +      ?F f ,S 
+ 6C 46 D7 15 A6 BD B0 E6 42 01 5B 8C 74 40 01 DC  ; lF      B [ t@  
+ 9E F9 C6 E4 B9 3D 46 0E 70 5C 0E 87 27 7B 01 C0  ;      =F p\  '{  
+ A8 65 03 42 96 57 F2 71 BC D1 7D D9 6E CB 08 33  ;  e B W q  } n  3
+ E7 72 CE 8C BD 8B 90 76 89 2F 0E 8E 45 F3 93 BC  ;  r     v /  E   
+ 
+Hello World!

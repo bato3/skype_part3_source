@@ -1,0 +1,51 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: pktsniff - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\user\LOCALS~1\Temp\RSP158.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"Q:\vc_proj\pktsniff\rc4\Expand_IV.c"
+"Q:\vc_proj\pktsniff\SkypeControl\ext42.c"
+"Q:\vc_proj\pktsniff\SkypeControl\pack-4142.c"
+"Q:\vc_proj\pktsniff\SkypeControl\unpack-4142.c"
+"Q:\vc_proj\pktsniff\pktsniff.c"
+"Q:\vc_proj\pktsniff\process.c"
+"Q:\vc_proj\pktsniff\util.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\user\LOCALS~1\Temp\RSP158.tmp" 
+Creating temporary file "C:\DOCUME~1\user\LOCALS~1\Temp\RSP159.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib ws2_32.lib wpcap.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/pktsniff.pdb" /debug /machine:I386 /out:"Debug/pktsniff.exe" /pdbtype:sept 
+.\Debug\Expand_IV.obj
+.\Debug\ext42.obj
+".\Debug\pack-4142.obj"
+".\Debug\unpack-4142.obj"
+.\Debug\pktsniff.obj
+.\Debug\process.obj
+.\Debug\util.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\user\LOCALS~1\Temp\RSP159.tmp"
+<h3>Output Window</h3>
+Compiling...
+Expand_IV.c
+ext42.c
+pack-4142.c
+unpack-4142.c
+pktsniff.c
+process.c
+util.c
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+pktsniff.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

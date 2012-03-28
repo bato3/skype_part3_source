@@ -1,0 +1,219 @@
+ENTER mysub_SessionManager_CMD_RECV_Process_00788E80
+Session ID=0 
+Session CMD=44
+ENTER: mysub_call_on_reply_check_possible_Flush_decode_pkt_header_decode_fail
+ENTER unpack_7_bit_encoded_to_dword 
+LEAVE unpack_7_bit_encoded_to_dword 
+First INT:B
+ENTER mysub_local_realloc_alloc_getlast_err_exception
+LEAVE mysub_local_realloc_alloc_getlast_err_exception
+ENTER copy_memory1
+LEAVE copy_memory1
+ENTER mysub_no_call_00724060
+LEAVE mysub_no_call_00724060
+ENTER copy_memory2
+COPY_MEMORY2: ecx=0x00000005 esi=0x0012F2A4
+LEAVE copy_memory2
+ENTER mysub_call_eax__free()
+LEAVE mysub_call_eax__free()
+ENTER mysub_unpack_7_bit_encoded
+heap_alloc_buf=3207A8,var5=3207A8
+1:READ BYTE7b=0
+ENTER unpack_7_bit_encoded_to_dword___2
+READ BYTE=3
+ecx=3
+LEAVE unpack_7_bit_encoded_to_dword___2
+MAINBUF 2: size(0x00000014)
+00000000 00000003 00000000 00000000 | 00000000 
+IF: eax=0,ebp=0
+ENTER unpack_7_bit_encoded_to_dword___2
+READ BYTE=D8
+ecx=58
+READ BYTE=4C
+ecx=2658
+LEAVE unpack_7_bit_encoded_to_dword___2
+MAINBUF 3: size(0x00000014)
+00000000 00000003 00002658 00000000 | 00000000 
+LEAVE mysub_unpack_7_bit_encoded
+ENTER copy_memory1
+LEAVE copy_memory1
+ENTER mysub_no_call_00724060
+LEAVE mysub_no_call_00724060
+ENTER copy_memory2
+COPY_MEMORY2: ecx=0x00000005 esi=0x0012F2A4
+LEAVE copy_memory2
+ENTER mysub_call_eax__free()
+LEAVE mysub_call_eax__free()
+ENTER mysub_unpack_7_bit_encoded
+heap_alloc_buf=3207A8,var5=3207BC
+1:READ BYTE7b=4
+ENTER unpack_7_bit_encoded_to_dword___2
+READ BYTE=1
+ecx=1
+LEAVE unpack_7_bit_encoded_to_dword___2
+MAINBUF 2: size(0x00000028)
+00000000 00000003 00002658 00000000 | 00000000 00000004 00000001 00000000 
+00000000 00000000 
+IF: eax=4,ebp=0
+ENTER unpack_7_bit_encoded_to_dword___2
+READ BYTE=15
+ecx=15
+LEAVE unpack_7_bit_encoded_to_dword___2
+MAINBUF 5: size(0x00000028)
+00000000 00000003 00002658 00000000 | 00000000 00000004 00000001 00000000 
+00000000 00000015 
+ENTER mysub_local_alloc_memerr_exception
+str alloc size:0x00000015
+LEAVE mysub_local_alloc_memerr_exception
+ENTER copy_memory2
+COPY_MEMORY2: ecx=0x00000005 esi=0x0042B0C7
+LEAVE copy_memory2
+3.1: size(0x00000015)
+BAA19719 A6C4F0C6 01C0A801 1CB33943 | A2AD8F7D 48000000 
+ENTER copy_memory1
+LEAVE copy_memory1
+ENTER mysub_no_call_00724060
+LEAVE mysub_no_call_00724060
+ENTER copy_memory2
+COPY_MEMORY2: ecx=0x00000005 esi=0x0012F2A4
+LEAVE copy_memory2
+ENTER mysub_call_eax__free()
+LEAVE mysub_call_eax__free()
+ENTER mysub_unpack_7_bit_encoded
+heap_alloc_buf=3207A8,var5=3207D0
+1:READ BYTE7b=1
+ENTER unpack_7_bit_encoded_to_dword___2
+READ BYTE=9
+ecx=9
+LEAVE unpack_7_bit_encoded_to_dword___2
+MAINBUF 2: size(0x0000003C)
+00000000 00000003 00002658 00000000 | 00000000 00000004 00000001 00000000 
+00320A60 00000015 00000001 00000009 | 00000000 00000000 00000000 
+IF: eax=1,ebp=0
+perviy int = 1
+
+
+
+
+
+
+
+
+
+
+eax=0x0000004C
+edx=0x00000000
+eax=0x0000004C
+edx=0x00000000
+
+
+
+
+eax=0x00000091
+edx=0x00000000
+eax=0x00000091
+edx=0x00000000
+
+
+
+
+eax=0x00000020
+edx=0x00000000
+eax=0x00000020
+edx=0x00000000
+
+
+
+
+eax=0x0000003A
+edx=0x00000000
+eax=0x0000003A
+edx=0x00000000
+
+
+ENTER copy_memory1
+LEAVE copy_memory1
+ENTER mysub_no_call_00724060
+LEAVE mysub_no_call_00724060
+ENTER copy_memory2
+COPY_MEMORY2: ecx=0x00000005 esi=0x0012F2A4
+LEAVE copy_memory2
+ENTER mysub_call_eax__free()
+LEAVE mysub_call_eax__free()
+ENTER mysub_unpack_7_bit_encoded
+heap_alloc_buf=3207A8,var5=3207E4
+1:READ BYTE7b=0
+ENTER unpack_7_bit_encoded_to_dword___2
+READ BYTE=1B
+ecx=1B
+LEAVE unpack_7_bit_encoded_to_dword___2
+MAINBUF 2: size(0x00000050)
+00000000 00000003 00002658 00000000 | 00000000 00000004 00000001 00000000 
+00320A60 00000015 00000001 00000009 | 00000000 4C91203A F45CA4FF 00000000 
+0000001B 00000000 00000000 00000000 | 
+IF: eax=0,ebp=0
+ENTER unpack_7_bit_encoded_to_dword___2
+READ BYTE=6
+ecx=6
+LEAVE unpack_7_bit_encoded_to_dword___2
+MAINBUF 3: size(0x00000050)
+00000000 00000003 00002658 00000000 | 00000000 00000004 00000001 00000000 
+00320A60 00000015 00000001 00000009 | 00000000 4C91203A F45CA4FF 00000000 
+0000001B 00000006 00000000 00000000 | 
+LEAVE mysub_unpack_7_bit_encoded
+ENTER copy_memory1
+LEAVE copy_memory1
+ENTER mysub_no_call_00724060
+LEAVE mysub_no_call_00724060
+ENTER copy_memory2
+COPY_MEMORY2: ecx=0x00000005 esi=0x0012F2A4
+LEAVE copy_memory2
+ENTER mysub_call_eax__free()
+LEAVE mysub_call_eax__free()
+ENTER mysub_unpack_7_bit_encoded
+heap_alloc_buf=3207A8,var5=3207F8
+1:READ BYTE7b=5
+ENTER unpack_7_bit_encoded_to_dword___2
+READ BYTE=7
+ecx=7
+LEAVE unpack_7_bit_encoded_to_dword___2
+MAINBUF 2: size(0x00000064)
+00000000 00000003 00002658 00000000 | 00000000 00000004 00000001 00000000 
+00320A60 00000015 00000001 00000009 | 00000000 4C91203A F45CA4FF 00000000 
+0000001B 00000006 00000000 00000000 | 00000005 00000007 00000000 00000000 
+00000000 
+IF: eax=5,ebp=0
+ENTER mysub_local_alloc_memerr_exception
+str alloc size:0x00000010
+LEAVE mysub_local_alloc_memerr_exception
+ENTER: mysub_call_on_reply_check_possible_Flush_decode_pkt_header_decode_fail
+ENTER unpack_7_bit_encoded_to_dword 
+LEAVE unpack_7_bit_encoded_to_dword 
+First INT:3
+ENTER mysub_local_realloc_alloc_getlast_err_exception
+LEAVE mysub_local_realloc_alloc_getlast_err_exception
+ENTER copy_memory1
+LEAVE copy_memory1
+ENTER mysub_no_call_00724060
+LEAVE mysub_no_call_00724060
+ENTER copy_memory2
+COPY_MEMORY2: ecx=0x00000005 esi=0x0012F2A4
+LEAVE copy_memory2
+ENTER mysub_call_eax__free()
+LEAVE mysub_call_eax__free()
+ENTER mysub_unpack_7_bit_encoded
+heap_alloc_buf=320AF0,var5=320AF0
+1:READ BYTE7b=2
+ENTER unpack_7_bit_encoded_to_dword___2
+READ BYTE=8
+ecx=8
+LEAVE unpack_7_bit_encoded_to_dword___2
+MAINBUF 2: size(0x00000014)
+00000002 00000008 00000000 00000000 | 00000000 
+IF: eax=2,ebp=0
+perviy int = 2, hz 27
+error code 0 returned after mysub_unpack_7_bit_encoded, hz 21
+error code 0 returned after mysub_unpack_7_bit_encoded, hz 21
+Flush_decode.. call fail with ret=0, jump on hzkuda4
+decode failed
+decode 41 failed

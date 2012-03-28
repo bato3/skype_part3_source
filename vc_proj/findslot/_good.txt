@@ -1,0 +1,88 @@
+01:09:26 ContactSearchManager: starting search (objectID=408)
+01:09:26 Searcher: search #2258 queued. targets=0 batch=3 maxqueries=16 exempt=0 terms={16='bigbones'}
+01:09:26 Searcher: search #2258 resultset 0: fields=2 minresults=10 splitfield=16 crcbits=32 ignore=0 extraattrs=0
+01:09:26 Searcher: search #2259 queued. targets=0 batch=3 maxqueries=16 exempt=0 terms={96~'ffb6b3aeac1af060eecdc3e04ba9b2fdef8c9e8e1b050945353a0341372cc62d'}
+01:09:26 Searcher: search #2259 resultset 0: fields=2 minresults=10 splitfield=16 crcbits=32 ignore=0 extraattrs=0
+01:09:26 ContactSearchManager: search (objectID=408) started. 2 sub-searches
+01:09:26 Searcher: search #2258 started
+01:09:26 Searcher: search #2259 started
+01:09:26 SupernodePool: sending request for 5 (0+4) snodes of slot #1198 to parentnode (reqID=2261)
+01:09:26 SupernodePool: sending request for 5 (0+4) snodes of slot #572 to parentnode (reqID=2263)
+
+Q:\vc_proj\findslot\Debug>findslot.exe bigbo
+ret: 0x5C9BA4AE
+slot: #1198 (0x000004AE)
+
+Q:\vc_proj\findslot\Debug>findslot.exe ffb6b3ae
+ret: 0x27397A3C
+slot: #572 (0x0000023C)
+
+===
+19:53:20 
+19:53:20 ContactSearchManager: starting search (objectID=111)
+19:53:20 Searcher: search #266 queued. targets=0 batch=3 maxqueries=16 exempt=0 terms={16='muzoboz2'}
+19:53:20 Searcher: search #266 resultset 0: fields=2 minresults=10 splitfield=16 crcbits=32 ignore=0 extraattrs=0
+19:53:20 Searcher: search #267 queued. targets=0 batch=3 maxqueries=16 exempt=0 terms={96~'fdb45acfb4a0ef19ca625fac90e0a9948734d3a1ef75fac7c80eb2ef84c00287'}
+19:53:20 Searcher: search #267 resultset 0: fields=2 minresults=10 splitfield=16 crcbits=32 ignore=0 extraattrs=0
+19:53:20 ContactSearchManager: search (objectID=111) started. 2 sub-searches
+19:53:20 Searcher: search #266 started
+19:54:32 Searcher: search #267 started
+19:54:52 Backbone: Searcher::manageSearches timedCall took too long (91469 instead of 200 ms)
+19:54:59 SupernodePool: sending request for 5 (0+4) snodes of slot #199 to parentnode (reqID=269)
+19:55:05 SupernodePool: sending request for 5 (0+4) snodes of slot #1849 to parentnode (reqID=271)
+
+Q:\vc_proj\findslot\Debug>findslot.exe muzoboz8
+ret: 0x9AD918C7
+slot: #199 (0x000000C7)
+
+Q:\vc_proj\findslot\Debug>findslot.exe fdb45acfb
+ret: 0xB4666F39
+slot: #1849 (0x00000739)
+
+===
+
+
+
+
+Q:\vc_proj\findslot\Debug>findslot.exe goodo
+ret: 0xE4E3622C
+slot: #556 (0x0000022C)
+
+===
+
+
+Q:\vc_proj\findslot\Debug>findslot.exe gonzo
+ret: 0x16770D5A
+slot: #1370 (0x0000055A)
+
+Q:\vc_proj\findslot\Debug>findslot.exe putin
+ret: 0xA9C6D06E
+slot: #110 (0x0000006E)
+
+==
+Slot: #1370 0x0000055A
+146.6.92.165:8306
+217.174.241.56:24818
+82.216.249.18:57956
+71.113.148.186:24784
+190.247.94.99:3895
+74.196.224.10:6601
+91.90.8.111:16569
+95.52.92.247:53672
+141.212.110.170:13999
+97.86.119.49:50750
+
+Slot: #110 0x0000006E
+201.20.70.23:29283
+193.206.68.27:56577
+61.27.60.223:27885
+118.128.231.73:47887
+140.116.235.66:9631
+123.0.213.239:52041
+150.140.3.129:32044
+84.108.18.13:15765
+66.69.8.243:52778
+70.95.167.80:52485
+
+===
+

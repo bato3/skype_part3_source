@@ -1,0 +1,114 @@
+SkypeUser: garyledzep
+User Slot: #897 (0x00000381)
+Nodes in slot: 10
+Search request to target node ip: 94.171.32.64
+aft rc4:
+Len: 0x00000006
+04 03 4A D9 42 15 
+Search request to target node ip: 80.29.225.90
+Search request to target node ip: 89.215.30.108
+aft rc4:
+Len: 0x00000007
+05 7B 06 21 42 3C 25 
+Search request to target node ip: 78.97.166.10
+aft rc4:
+Len: 0x00000006
+04 03 72 A6 42 15 
+Search request to target node ip: 62.195.239.173
+aft rc4:
+Len: 0x00000006
+04 03 28 8C 42 15 
+Search request to target node ip: 92.233.82.2
+Search request to target node ip: 93.161.51.25
+Search request to target node ip: 24.1.162.192
+Search request to target node ip: 89.155.117.78
+Search request to target node ip: 76.123.211.129
+aft rc4:
+Len: 0x000001A1
+9E 03 7B 5E 4B 42 F6 1E B1 13 70 7B 86 E8 2F 44 
+ E0 CA 10 00 00 01 04 00 00 00 01 29 35 18 A2 07 
+ 2A F2 5C 42 4B 64 4A D5 F9 B0 BF 0E AE C5 A2 CC 
+ E3 9C 6B E7 E2 8D A0 1B CA C7 F2 C1 A2 D3 4F 1C 
+ 6D 3C 58 A3 70 66 80 A7 0A EA D3 6B 6D 00 5C B9 
+ D7 43 FD C4 EC 55 E8 D6 A7 1E 43 69 F4 28 16 92 
+ F6 94 26 B8 C2 00 8E 5E 54 27 A5 DF F4 55 5C 4D 
+ 6B FF A0 9F 9C 12 11 E9 DD 04 CD 4D 56 1B 53 8A 
+ E6 94 EF C5 B8 07 F0 E5 67 89 C6 08 6D 5C B5 5C 
+ 77 ED 74 52 04 9C 9C FD 1C 7C 39 D9 74 28 01 16 
+ 5C B5 CE E3 29 22 40 95 19 0F 40 E1 FA 5B D6 9E 
+ 8D 7A 7D C6 A0 24 4C 3E 36 31 84 04 FF 3D AC 38 
+ 18 73 1C 68 FA 2A B3 91 24 73 64 7D 7C A3 35 94 
+ 53 59 88 8A 3C 33 5A 5F B8 42 AC BF 94 EB B7 18 
+ 4F B3 31 2A 8F D6 24 A5 93 C7 17 CF 63 4E 4B 0B 
+ 01 99 5B B5 13 BB CA C0 9F EE 44 15 21 93 6B 75 
+ F3 32 B6 9C C5 9E 62 87 08 CC BB 9D E1 91 D5 F3 
+ 88 F6 A9 B1 F3 56 7E 39 7B 0D 13 94 7D 03 A2 A3 
+ 5C E4 6E D8 F6 F0 84 EC D8 79 5C CF 1D 91 96 97 
+ EE F1 BE A2 FB 4F 7A 6C 50 B0 72 47 36 F9 8D 3D 
+ BD B2 DD 5F 4A 0E 3D 15 82 E3 B9 0A 4F 39 2E 43 
+ 4B FF EC A5 17 61 E6 9F CB E1 54 91 66 3A 5C 9F 
+ C9 74 46 94 DE 08 53 6A DF 8A A4 06 D2 BE B3 98 
+ 7A 85 3A E0 1C 20 F7 5A 69 B3 18 ED 85 2D BE D2 
+ D4 62 CB 98 DD 69 0C 74 50 B5 68 2E 8D 3D C5 5B 
+ CF C0 C4 69 A9 1A 0F 79 9E C8 6D 18 BD 4B A7 85 
+ A1 
+
+::CREDENTIALS::
+Skypename: garyledzep
+
+Profile:
+04-03: 27 bytes
+0000: 56 4E C2 05 C8 17 BA 70 00 18 BD 4B A7 85 A1 18 | VN.....p...K.... |
+0010: BA D6 7D 08 15 61 A5 CF 5E F5 0D                | ..}..a..^..      |
+03-14: "Gary Miranda"
+03-24: "en"
+03-28: "us"
+03-30: "Mastic Beach"
+03-40: "6b41488ae76813697eca7dc2d46d0620b3e417ea"
+00-5F: 2E 00 00 00
+04-03: 27 bytes
+0000: 56 4E C2 05 C8 17 BA 70 00 18 BD 4B A7 85 A1 18 | VN.....p...K.... |
+0010: BA D6 7D 08 15 61 A5 CF 5E F5 0D                | ..}..a..^..      |
+03-14: "Gary Miranda"
+03-24: "en"
+03-28: "us"
+03-30: "Mastic Beach"
+03-40: "6b41488ae76813697eca7dc2d46d0620b3e417ea"
+00-5F: 2E 00 00 00
+ost len:0x00000071
+
+Learned new nodeinfo for garyledzep: ipflag: 0x0
+0x564ec25c817ba70-s-24.186.214.125:2069/24.189.75.167:34209 97.165.207.94:62733
+
+:: END ::
+
+05-00: {
+04-0B: 398 bytes
+0000: 00 00 01 04 00 00 00 01 29 35 18 A2 07 2A F2 5C | ........)5...*.\ |
+0010: 42 4B 64 4A D5 F9 B0 BF 0E AE C5 A2 CC E3 9C 6B | BKdJ...........k |
+0020: E7 E2 8D A0 1B CA C7 F2 C1 A2 D3 4F 1C 6D 3C 58 | ...........O.m<X |
+0030: A3 70 66 80 A7 0A EA D3 6B 6D 00 5C B9 D7 43 FD | .pf.....km.\..C. |
+0040: C4 EC 55 E8 D6 A7 1E 43 69 F4 28 16 92 F6 94 26 | ..U....Ci.(....& |
+0050: B8 C2 00 8E 5E 54 27 A5 DF F4 55 5C 4D 6B FF A0 | ....^T'...U\Mk.. |
+0060: 9F 9C 12 11 E9 DD 04 CD 4D 56 1B 53 8A E6 94 EF | ........MV.S.... |
+0070: C5 B8 07 F0 E5 67 89 C6 08 6D 5C B5 5C 77 ED 74 | .....g...m\.\w.t |
+0080: 52 04 9C 9C FD 1C 7C 39 D9 74 28 01 16 5C B5 CE | R.....|9.t(..\.. |
+0090: E3 29 22 40 95 19 0F 40 E1 FA 5B D6 9E 8D 7A 7D | .)"@...@..[...z} |
+00A0: C6 A0 24 4C 3E 36 31 84 04 FF 3D AC 38 18 73 1C | ..$L>61...=.8.s. |
+00B0: 68 FA 2A B3 91 24 73 64 7D 7C A3 35 94 53 59 88 | h.*..$sd}|.5.SY. |
+00C0: 8A 3C 33 5A 5F B8 42 AC BF 94 EB B7 18 4F B3 31 | .<3Z_.B......O.1 |
+00D0: 2A 8F D6 24 A5 93 C7 17 CF 63 4E 4B 0B 01 99 5B | *..$.....cNK...[ |
+00E0: B5 13 BB CA C0 9F EE 44 15 21 93 6B 75 F3 32 B6 | .......D.!.ku.2. |
+00F0: 9C C5 9E 62 87 08 CC BB 9D E1 91 D5 F3 88 F6 A9 | ...b............ |
+0100: B1 F3 56 7E 39 7B 0D 13 6A 4F 85 40 D0 0E 0D C5 | ..V~9{..jO.@.... |
+0110: 07 C5 33 28 78 35 46 86 FD D5 F6 8E 25 42 C4 68 | ..3(x5F.....%B.h |
+0120: AC B8 90 57 D1 7B 35 9F E7 00 DC 84 C2 83 C8 23 | ...W.{5........# |
+0130: F2 A2 D8 5C F7 67 8D 0A B3 AD B8 79 26 8D 6C 30 | ...\.g.....y&.l0 |
+0140: C5 43 39 60 60 E4 31 CB 18 FB 10 FB 85 15 54 DA | .C9``.1.......T. |
+0150: 9E 73 5B 87 76 6C 58 35 D3 C6 59 B8 14 2A 56 4E | .s[.vlX5..Y..*VN |
+0160: C2 05 C8 17 BA 70 00 18 BD 4B A7 85 A1 18 BA D6 | .....p...K...... |
+0170: 7D 08 15 61 A5 CF 5E F5 0D 58 DD 41 7D 2A 6F D4 | }..a..^..X.A}*o. |
+0180: 50 5B 3E 0D B5 54 D6 BC 18 BD 4B A7 85 A1       | P[>..T....K...   |
+03-10: "garyledzep"
+05-00: }
+00-01: 01 00 00 00

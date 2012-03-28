@@ -1,0 +1,151 @@
+BLOBs setup1pkt encoded successfully
+BLOBs setup2pkt encoded successfully
+BLOBs sess1pkt1 encoded successfully
+BLOBs sess1pkt2 encoded successfully
+BLOBs sess2pkt1 encoded successfully
+BLOBs sess2pkt2 encoded successfully
+BLOBs sess2pkt3 encoded successfully
+BLOBs sess2pkt3 encoded successfully
+BLOBs sess2pkt4 encoded successfully
+BLOBs sess3pkt1 encoded successfully
+BLOBs sess3pkt2 encoded successfully
+BLOBs sess3pkt3 encoded successfully
+BLOBs sess3pkt4 encoded successfully
+ENTER mysub_SessionManager_CMD_RECV_Process_00788E80
+calc sess_id, readed byte: edx=0xFFFFFFFC
+calc sess_id, readed byte: edx=0x0000006D
+Session ID=36FC 
+Session CMD=6D
+ENTER: mysub_call_on_reply_check_possible_Flush_decode_pkt_header_decode_fail
+ENTER unpack_7_bit_encoded_to_dword 
+LEAVE unpack_7_bit_encoded_to_dword 
+First INT:3
+ENTER mysub_local_realloc_alloc_getlast_err_exception
+LEAVE mysub_local_realloc_alloc_getlast_err_exception
+ENTER copy_memory1
+LEAVE copy_memory1
+ENTER mysub_no_call_00724060
+LEAVE mysub_no_call_00724060
+ENTER copy_memory2
+COPY_MEMORY2: ecx=0x00000005 esi=0x0012E244
+LEAVE copy_memory2
+ENTER mysub_call_eax__free()
+LEAVE mysub_call_eax__free()
+ENTER mysub_unpack_7_bit_encoded
+heap_alloc_buf=3207A8,var5=3207A8
+1:READ BYTE7b=0
+ENTER unpack_7_bit_encoded_to_dword___2
+READ BYTE=1
+ecx=1
+LEAVE unpack_7_bit_encoded_to_dword___2
+MAINBUF 2: size(0x00000014)
+00000000 00000001 00000000 00000000 | 00000000 
+IF: eax=0,ebp=0
+ENTER unpack_7_bit_encoded_to_dword___2
+READ BYTE=87
+ecx=7
+READ BYTE=BF
+ecx=1F87
+READ BYTE=86
+ecx=19F87
+READ BYTE=AC
+ecx=5819F87
+READ BYTE=5
+ecx=55819F87
+LEAVE unpack_7_bit_encoded_to_dword___2
+MAINBUF 3: size(0x00000014)
+00000000 00000001 55819F87 00000000 | 00000000 
+LEAVE mysub_unpack_7_bit_encoded
+ENTER copy_memory1
+LEAVE copy_memory1
+ENTER mysub_no_call_00724060
+LEAVE mysub_no_call_00724060
+ENTER copy_memory2
+COPY_MEMORY2: ecx=0x00000005 esi=0x0012E244
+LEAVE copy_memory2
+ENTER mysub_call_eax__free()
+LEAVE mysub_call_eax__free()
+ENTER mysub_unpack_7_bit_encoded
+heap_alloc_buf=3207A8,var5=3207BC
+1:READ BYTE7b=0
+ENTER unpack_7_bit_encoded_to_dword___2
+READ BYTE=3
+ecx=3
+LEAVE unpack_7_bit_encoded_to_dword___2
+MAINBUF 2: size(0x00000028)
+00000000 00000001 55819F87 00000000 | 00000000 00000000 00000003 00000000 
+00000000 00000000 
+IF: eax=0,ebp=0
+ENTER unpack_7_bit_encoded_to_dword___2
+READ BYTE=2
+ecx=2
+LEAVE unpack_7_bit_encoded_to_dword___2
+MAINBUF 3: size(0x00000028)
+00000000 00000001 55819F87 00000000 | 00000000 00000000 00000003 00000002 
+00000000 00000000 
+LEAVE mysub_unpack_7_bit_encoded
+ENTER copy_memory1
+LEAVE copy_memory1
+ENTER mysub_no_call_00724060
+LEAVE mysub_no_call_00724060
+ENTER copy_memory2
+COPY_MEMORY2: ecx=0x00000005 esi=0x0012E244
+LEAVE copy_memory2
+ENTER mysub_call_eax__free()
+LEAVE mysub_call_eax__free()
+ENTER mysub_unpack_7_bit_encoded
+heap_alloc_buf=3207A8,var5=3207D0
+1:READ BYTE7b=0
+ENTER unpack_7_bit_encoded_to_dword___2
+READ BYTE=8
+ecx=8
+LEAVE unpack_7_bit_encoded_to_dword___2
+MAINBUF 2: size(0x0000003C)
+00000000 00000001 55819F87 00000000 | 00000000 00000000 00000003 00000002 
+00000000 00000000 00000000 00000008 | 00000000 00000000 00000000 
+IF: eax=0,ebp=0
+ENTER unpack_7_bit_encoded_to_dword___2
+READ BYTE=1
+ecx=1
+LEAVE unpack_7_bit_encoded_to_dword___2
+MAINBUF 3: size(0x0000003C)
+00000000 00000001 55819F87 00000000 | 00000000 00000000 00000003 00000002 
+00000000 00000000 00000000 00000008 | 00000001 00000000 00000000 
+LEAVE mysub_unpack_7_bit_encoded
+LEAVE: mysub_call_on_reply_check_possible_Flush_decode_pkt_header_decode_fail
+last bytes ( 0x5D 0x80 0x00 0x00 )
+left=0x00000004 buflen=0x00000016
+MAINBUF COMPLETED: size(0x0000003C)
+00000000 00000001 55819F87 00000000 | 00000000 00000000 00000003 00000002 
+00000000 00000000 00000000 00000008 | 00000001 00000000 00000000 
+no alloc struct-esLEAVE mysub_SessionManager_CMD_RECV_Process_00788E80
+possible not all bytes decoded! (not found last 2 bytes of crc16)
+==============================================
+PKT:
+==============================================
+Session id:  0x000036FC (14076)
+Session cmd: 0x0000006D (109)
+MAIN: size(0x0000003C)
+00000000 00000001 55819F87 00000000 | 00000000 00000000 00000003 00000002 
+00000000 00000000 00000000 00000008 | 00000001 00000000 00000000 
+
+next bytes: 0x00000000 0x00000001 0x55819F87 0x00000000 0x00000000 
+obj_type :  0x00000000
+obj_index:  0x00000001
+data:       0x55819F87
+data_ptr:   0x00000000 0x00000000
+
+next bytes: 0x00000000 0x00000003 0x00000002 0x00000000 0x00000000 
+obj_type :  0x00000000
+obj_index:  0x00000003
+data:       0x00000002
+data_ptr:   0x00000000 0x00000000
+
+next bytes: 0x00000000 0x00000008 0x00000001 0x00000000 0x00000000 
+obj_type :  0x00000000
+obj_index:  0x00000008
+data:       0x00000001
+data_ptr:   0x00000000 0x00000000
+
+
+BLOBs sess3pkt5 encoding failed

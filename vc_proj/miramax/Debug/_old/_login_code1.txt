@@ -1,0 +1,20 @@
+unsign cred:
+Len: 0x00000100
+4B BB BB BB BB BB BB BB BB BB BB BB BB BB BB BB  ; K               
+ BB BB BB BB BB BB BB BB BB BB BB BB BB BB BB BB  ;                 
+ BB BB BB BB BB BB BB BB BB BB BB BB BB BB BB BB  ;                 
+ BB BB BB BB BB BB BB BB BB BB BB BB BB BB BB BB  ;                 
+ BA 41 05 03 00 6A 6F 68 6E 2E 2E 2E 66 2E 2E 2E  ;  A   john...f...
+ 64 6F 65 00 00 03 00 04 01 80 01 05 98 89 5F 1A  ; doe           _ 
+ B7 80 00 C4 C2 CC 93 A0 25 6C 4E DE 87 25 23 71  ;         %lN  %#q
+ 2A 0C E8 7D 97 46 02 87 C8 20 3B F1 4A 96 70 42  ; *  } F    ; J pB
+ 5C 38 30 11 52 F0 E2 DC 95 03 6D 6F 01 60 84 CF  ; \80 R     mo `  
+ 60 52 74 7D 91 9B 45 50 7F DF FF 38 92 C6 BD 86  ; `Rt}  EP  8    
+ C7 78 4A 46 47 A2 BF 09 38 A7 7C 4D 3B 53 6A E8  ;  xJFG   8 |M;Sj 
+ A9 9E EC 1A 14 5B 42 0D B0 01 19 09 D9 0A 4D C5  ;      [B       M 
+ 13 52 DE FA 08 C4 3F 19 40 84 03 6C 67 18 17 10  ;  R    ? @  lg   
+ 4B E6 59 76 8E F7 91 3E 83 A6 72 00 04 D6 F3 FD  ; K Yv   >  r     
+ 09 05 02 41 01 00 09 D6 F3 FD 09 0B 46 40 70 CE  ;    A        F@p 
+ DF 31 66 AB 49 A5 E9 33 6A 15 AF 63 5D 93 9C BC  ;  1f I  3j  c]   
+ 
+Hello World!
